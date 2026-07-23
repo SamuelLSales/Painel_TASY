@@ -16,6 +16,13 @@ st.markdown("""
         #MainMenu {visibility: hidden;}
         footer {visibility: hidden;}
         header {visibility: hidden;}
+        /* Ocultar marca d'água e toolbar do Streamlit Cloud */
+        [data-testid="stToolbar"] {visibility: hidden !important;}
+        [data-testid="stDecoration"] {display: none !important;}
+        [data-testid="stDeployButton"] {display: none !important;}
+        .stDeployButton {display: none !important;}
+        #stDecoration {display: none !important;}
+        button[kind="header"] {display: none !important;}
         html, body, [data-testid="stAppViewContainer"], .stApp {
             background-color: #FAF8F3 !important;
             margin: 0 !important;
