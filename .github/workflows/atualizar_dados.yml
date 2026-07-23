@@ -2,9 +2,8 @@ name: Sincronizar OneDrive ao vivo
 
 on:
   schedule:
-    # Roda automaticamente a cada 2 horas
     - cron: '0 */2 * * *'
-  workflow_dispatch: # Permite rodar manualmente no botão do GitHub se quiser
+  workflow_dispatch:
 
 jobs:
   update-data:
@@ -34,7 +33,7 @@ jobs:
           ONEDRIVE_URL = 'https://1drv.ms/x/c/2C62B039F7F27235/IQC0sPfxiHBLRommd2UGb8aLAaGrLnl-5TF_topDMBLFWQQ?download=1'
           data = {'pessoas': [], 'modulos': [], 'uas': [], 'uassist': []}
 
-          hdrs = {'User-Agent': 'Mozilla/5.0'}
+          hdrs = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
           res = requests.get(ONEDRIVE_URL, headers=hdrs, timeout=30)
           if res.status_code == 200:
               xls = pd.ExcelFile(io.BytesIO(res.content), engine='openpyxl')
@@ -57,8 +56,13 @@ jobs:
                       df = df.rename(columns={'ID_Modulo':'id','Sigla UA':'sigla_ua','ID_UnidadeAdm':'id_ua','Unidade Administrativa':'ua','Nome do Módulo':'nome','Detalhamento':'detalhamento'})
                       data['modulos'] = df.to_dict(orient='records')
 
-          with open('data.json', 'w', encoding='utf-8') as f:
-              json.dump(data, f, ensure_ascii=False)
+          # Trava de segurança: Só salva se realmente encontrou dados
+          if len(data['pessoas']) > 0:
+              with open('data.json', 'w', encoding='utf-8') as f:
+                  json.dump(data, f, ensure_ascii=False)
+              print('Sucesso: data.json gerado com', len(data['pessoas']), 'pessoas!')
+          else:
+              print('Aviso: Nenhum dado extraído. Mantendo data.json anterior por segurança.')
           "
 
       - name: Salvar e Commit no GitHub se houver alterações
