@@ -8,10 +8,10 @@ __pycache__/
 *.pyc
 *.pyo
 
-# Dados locais (sensíveis - não subir)
+# Dados locais
 *.xlsx
 *.xls
-*.json
+
 
 # Arquivos do sistema
 .DS_Store

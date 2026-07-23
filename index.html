@@ -1877,19 +1877,31 @@ function processarArquivoExcel(file) {
 }
 
 async function carregarDadosAoVivo() {
+  // 1. Tenta carregar os dados instantâneos do data.json
   try {
-    const res = await fetch('/.netlify/functions/dados');
-    if (res.ok) {
-      const newData = await res.json();
-      if (newData.pessoas && newData.pessoas.length) DATA.pessoas = newData.pessoas;
-      if (newData.modulos && newData.modulos.length) DATA.modulos = newData.modulos;
-      if (newData.uas && newData.uas.length) DATA.uas = newData.uas;
-      if (newData.uassist && newData.uassist.length) DATA.uassist = newData.uassist;
+    const resLocal = await fetch('/data.json');
+    if (resLocal.ok) {
+      const localData = await resLocal.json();
+      if (localData.pessoas && localData.pessoas.length) DATA.pessoas = localData.pessoas;
+      if (localData.modulos && localData.modulos.length) DATA.modulos = localData.modulos;
+      if (localData.uas && localData.uas.length) DATA.uas = localData.uas;
+      if (localData.uassist && localData.uassist.length) DATA.uassist = localData.uassist;
       renderizarPaginaAtual();
     }
-  } catch (e) {
-    console.log("Modo offline ou local.");
-  }
+  } catch (e) {}
+
+  // 2. Consulta a função serverless para dados atualizados ao vivo do OneDrive
+  try {
+    const resLive = await fetch('/.netlify/functions/dados');
+    if (resLive.ok) {
+      const liveData = await resLive.json();
+      if (liveData.pessoas && liveData.pessoas.length) DATA.pessoas = liveData.pessoas;
+      if (liveData.modulos && liveData.modulos.length) DATA.modulos = liveData.modulos;
+      if (liveData.uas && liveData.uas.length) DATA.uas = liveData.uas;
+      if (liveData.uassist && liveData.uassist.length) DATA.uassist = liveData.uassist;
+      renderizarPaginaAtual();
+    }
+  } catch (e) {}
 }
 
 function inicializarPainelComDados() {
