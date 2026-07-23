@@ -4,3 +4,8 @@
 
 [functions]
   directory = "netlify/functions"
+
+[[redirects]]
+  from = "/api/dados"
+  to = "/.netlify/functions/dados"
+  status = 200

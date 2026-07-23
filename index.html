@@ -1892,7 +1892,8 @@ async function carregarDadosAoVivo() {
 
   // 2. Consulta a função serverless para dados atualizados ao vivo do OneDrive
   try {
-    const resLive = await fetch('/.netlify/functions/dados');
+    let resLive = await fetch('/.netlify/functions/dados');
+    if (!resLive.ok) resLive = await fetch('/api/dados');
     if (resLive.ok) {
       const liveData = await resLive.json();
       if (liveData.pessoas && liveData.pessoas.length) DATA.pessoas = liveData.pessoas;
