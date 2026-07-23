@@ -10,6 +10,18 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+# Redirecionar automaticamente para ?embed=true para remover marca d'água do Streamlit
+params = st.query_params
+if params.get("embed") != "true":
+    st.markdown("""
+        <script>
+            const url = new URL(window.location.href);
+            url.searchParams.set('embed', 'true');
+            window.location.replace(url.toString());
+        </script>
+    """, unsafe_allow_html=True)
+    st.stop()
+
 # Custom CSS para ocultar barras padrão do Streamlit e garantir fundo 100% branco sem scroll
 st.markdown("""
     <style>
