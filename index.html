@@ -1750,7 +1750,7 @@ function renderModules(){
     const units=ag.filter(a=>a.responsabilidade==='Ponto Focal da Unidade'||a.responsabilidade==='Usuário-Chave');
     return `<article class="module-card">
       <div class="module-head" onclick="this.parentElement.classList.toggle('open')">
-        <div><div class="module-title">${esc(m.nome)}</div><div class="module-badges"><span class="badge badge-id">${esc(m.id)}</span><span class="badge badge-area">${esc(m.sigla_ua)}</span></div></div><strong style="color:var(--teal-600)">⌄</strong>
+        <div><div class="module-title">${esc(m.nome)}</div><div class="module-badges"><span class="badge badge-area">${esc(m.sigla_ua)}</span></div></div><strong style="color:var(--teal-600)">⌄</strong>
       </div>
       <div class="module-desc">${esc(m.detalhamento)}</div>
       <div class="module-detail">
