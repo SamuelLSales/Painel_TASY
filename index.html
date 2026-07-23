@@ -1770,8 +1770,8 @@ function selectArea(sigla,btn){
   const u=DATA.uas.find(x=>norm(x.sigla)===norm(sigla)); const mods=DATA.modulos.filter(m=>norm(m.sigla_ua)===norm(sigla)); const agents=DATA.pessoas.filter(p=>norm(p.setor)===norm(sigla));
   const pfs=agents.filter(a=>a.responsabilidade==='Ponto Focal ADC'); const ats=agents.filter(a=>a.responsabilidade==='Área Técnica');
   document.getElementById('area-detail').innerHTML=`<h2>${esc(u.sigla)} — ${esc(u.nome)}</h2>
-    <div class="area-block"><h3>Ponto Focal ADC</h3><div class="info-list">${pfs.length?pfs.map(a=>`<div class="info-item"><b>${esc(a.nome)}</b>${a.masp?` · MASP ${esc(a.masp)}`:''}${a.vinculo?` · ${esc(a.vinculo)}`:''}</div>`).join(''):'<div class="info-item">Nenhum Ponto Focal ADC preenchido.</div>'}</div></div>
-    <div class="area-block"><h3>Área Técnica</h3><div class="info-list">${ats.length?ats.map(a=>`<div class="info-item"><b>${esc(a.nome)}</b>${a.masp?` · MASP ${esc(a.masp)}`:''}${a.vinculo?` · ${esc(a.vinculo)}`:''}</div>`).join(''):'<div class="info-item">Nenhuma Área Técnica preenchida.</div>'}</div></div>
+    <div class="area-block"><h3>Ponto Focal ADC</h3><div class="info-list">${pfs.length?pfs.map(a=>`<div class="info-item"><b>${esc(a.nome)}</b>${a.modulo?` · ${esc(a.modulo)}`:''}${a.masp?` · MASP ${esc(a.masp)}`:''}${a.vinculo?` · ${esc(a.vinculo)}`:''}</div>`).join(''):'<div class="info-item">Nenhum Ponto Focal ADC preenchido.</div>'}</div></div>
+    <div class="area-block"><h3>Área Técnica</h3><div class="info-list">${ats.length?ats.map(a=>`<div class="info-item"><b>${esc(a.nome)}</b>${a.modulo?` · ${esc(a.modulo)}`:''}${a.masp?` · MASP ${esc(a.masp)}`:''}${a.vinculo?` · ${esc(a.vinculo)}`:''}</div>`).join(''):'<div class="info-item">Nenhuma Área Técnica preenchida.</div>'}</div></div>
     <div class="area-block"><h3>Módulos desta área</h3><div class="info-list">${mods.map(m=>`<div class="info-item"><b>${esc(m.nome)}</b><br><span style="color:var(--ink-soft)">${esc(m.detalhamento)}</span></div>`).join('')}</div></div>`;
 }
 
