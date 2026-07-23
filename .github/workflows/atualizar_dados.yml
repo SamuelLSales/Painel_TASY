@@ -65,9 +65,10 @@ jobs:
               print('Aviso: Nenhum dado extraído. Mantendo data.json anterior por segurança.')
           "
 
-      - name: Salvar e Commit no GitHub se houver alterações
+      - name: Salvar e Commit no GitHub
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
           git add data.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "auto: sincronização automática da planilha do OneDrive" && git push)
+          git commit -m "auto: atualização da planilha do OneDrive [$(date +'%Y-%m-%d %H:%M')]" || exit 0
+          git push
