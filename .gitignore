@@ -1,3 +1,7 @@
+# Dependências e Builds
+node_modules/
+dist/
+
 # Ambiente virtual Python
 .venv/
 venv/
