@@ -1786,8 +1786,7 @@ function selectUnit(sigla,btn){
   const pf=agents.filter(a=>a.responsabilidade==='Ponto Focal da Unidade'); const uc=agents.filter(a=>a.responsabilidade==='Usuário-Chave'); const mods=uniq(agents.map(a=>a.modulo));
   document.getElementById('unit-detail').innerHTML=`<h2 style="font-size:20px;color:var(--teal-800);margin-bottom:16px">${esc(u.sigla)} — ${esc(u.nome)}</h2>
     <div class="area-block"><h3>Ponto Focal da Unidade</h3><div class="info-list">${pf.length?pf.map(a=>`<div class="info-item"><b>${esc(a.nome)}</b>${a.masp?` · MASP ${esc(a.masp)}`:''}${a.vinculo?` · ${esc(a.vinculo)}`:''}</div>`).join(''):'<div class="info-item">Nenhum Ponto Focal da Unidade preenchido.</div>'}</div></div>
-    <div class="area-block"><h3>Usuários-Chave</h3><div class="info-list">${uc.length?uc.map(a=>`<div class="info-item"><b>${esc(a.nome)}</b>${a.modulo?` · ${esc(a.modulo)}`:''}${a.masp?` · MASP ${esc(a.masp)}`:''}</div>`).join(''):'<div class="info-item">Nenhum Usuário-Chave preenchido.</div>'}</div></div>
-    <div class="area-block"><h3>Módulos relacionados</h3><div class="info-list">${mods.length?mods.map(m=>`<div class="info-item">${esc(m)}</div>`).join(''):'<div class="info-item">Nenhum módulo relacionado preenchido.</div>'}</div></div>`;
+    <div class="area-block"><h3>Usuários-Chave</h3><div class="info-list">${uc.length?uc.map(a=>`<div class="info-item"><b>${esc(a.nome)}</b>${a.modulo?` · ${esc(a.modulo)}`:''}${a.masp?` · MASP ${esc(a.masp)}`:''}</div>`).join(''):'<div class="info-item">Nenhum Usuário-Chave preenchido.</div>'}</div></div>`;
 }
 
 function renderAgents(){
