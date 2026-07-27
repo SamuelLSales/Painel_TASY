@@ -27,37 +27,58 @@ jobs:
 
       - name: Baixar planilha do OneDrive e gerar data.json
         run: |
-          python -c "
-          import requests, pandas as pd, io, unicodedata, json
+          python - <<'PY'
+          import requests, pandas as pd, io, unicodedata, json, zipfile, sys, os
 
           def norm(s):
               return unicodedata.normalize('NFD', str(s)).encode('ascii', 'ignore').decode('utf-8').lower().strip()
 
-          ONEDRIVE_URL = 'https://1drv.ms/x/c/2C62B039F7F27235/IQC0sPfxiHBLRommd2UGb8aLAaGrLnl-5TF_topDMBLFWQQ?download=1'
+          ONEDRIVE_URL = 'https://1drv.ms/x/c/2C62B039F7F27235/IQBiLMh61Pn1SZGH0PGCZjLNAWnyqMmXevmXjoQD05R0YGQ?e=zEdRU9'
           data = {'pessoas': [], 'modulos': [], 'uas': [], 'uassist': []}
 
           hdrs = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
-          res = requests.get(ONEDRIVE_URL, headers=hdrs, timeout=30)
-          if res.status_code == 200:
-              xls = pd.ExcelFile(io.BytesIO(res.content), engine='openpyxl')
-              for sheet_name in xls.sheet_names:
-                  name = norm(sheet_name)
-                  if 'pessoa' in name:
-                      df = pd.read_excel(xls, sheet_name=sheet_name, header=5).fillna('')
-                      df = df.rename(columns={'Nome':'nome','MASP':'masp','Vínculo':'vinculo','Setor / Unidade Administrativa':'setor','Módulo':'modulo','Tipo de Responsabilidade':'responsabilidade','Unidade Assistencial':'unidade_assistencial'})
-                      data['pessoas'] = df.to_dict(orient='records')
-                  elif 'uassist' in name:
-                      df = pd.read_excel(xls, sheet_name=sheet_name, header=5).fillna('')
-                      df = df.rename(columns={'ID_UnidadeAssist':'id','Sigla':'sigla','Nome':'nome'})
-                      data['uassist'] = df.to_dict(orient='records')
-                  elif 'cadastrar ua' == name:
-                      df = pd.read_excel(xls, sheet_name=sheet_name, header=5).fillna('')
-                      df = df.rename(columns={'ID_UnidadeAdm':'id','Sigla':'sigla','Nome':'nome'})
-                      data['uas'] = df.to_dict(orient='records')
-                  elif 'modulo' in name:
-                      df = pd.read_excel(xls, sheet_name=sheet_name, header=5).fillna('')
-                      df = df.rename(columns={'ID_Modulo':'id','Sigla UA':'sigla_ua','ID_UnidadeAdm':'id_ua','Unidade Administrativa':'ua','Nome do Módulo':'nome','Detalhamento':'detalhamento'})
-                      data['modulos'] = df.to_dict(orient='records')
+          print('Requesting file from OneDrive...')
+          try:
+              res = requests.get(ONEDRIVE_URL, headers=hdrs, timeout=30, allow_redirects=True)
+          except Exception as e:
+              print('Request failed:', e)
+              # exit non-zero so action fails on network error
+              sys.exit(1)
+
+          print('Status:', res.status_code)
+          print('Content-Type:', res.headers.get('content-type'))
+
+          buf = io.BytesIO(res.content)
+          # If not a valid xlsx (zip), save response for debugging and skip update (no crash)
+          if res.status_code != 200 or not zipfile.is_zipfile(buf):
+              debug_path = 'debug_onedrive_response.bin'
+              with open(debug_path, 'wb') as f:
+                  f.write(res.content)
+              print(f'Error: downloaded content is not a valid XLSX. Saved response to {debug_path} for inspection.')
+              print('Skipping update to avoid openpyxl error.')
+              # exit 0 to avoid failing the whole workflow; change to sys.exit(1) if you want the job to fail
+              sys.exit(0)
+
+          # Safe to parse
+          xls = pd.ExcelFile(buf, engine='openpyxl')
+          for sheet_name in xls.sheet_names:
+              name = norm(sheet_name)
+              if 'pessoa' in name:
+                  df = pd.read_excel(xls, sheet_name=sheet_name, header=5).fillna('')
+                  df = df.rename(columns={'Nome':'nome','MASP':'masp','Vínculo':'vinculo','Setor / Unidade Administrativa':'setor','Módulo':'modulo','Tipo de Responsabilidade':'responsabilidade'})
+                  data['pessoas'] = df.to_dict(orient='records')
+              elif 'uassist' in name:
+                  df = pd.read_excel(xls, sheet_name=sheet_name, header=5).fillna('')
+                  df = df.rename(columns={'ID_UnidadeAssist':'id','Sigla':'sigla','Nome':'nome'})
+                  data['uassist'] = df.to_dict(orient='records')
+              elif 'cadastrar ua' == name:
+                  df = pd.read_excel(xls, sheet_name=sheet_name, header=5).fillna('')
+                  df = df.rename(columns={'ID_UnidadeAdm':'id','Sigla':'sigla','Nome':'nome'})
+                  data['uas'] = df.to_dict(orient='records')
+              elif 'modulo' in name:
+                  df = pd.read_excel(xls, sheet_name=sheet_name, header=5).fillna('')
+                  df = df.rename(columns={'ID_Modulo':'id','Sigla UA':'sigla_ua','ID_UnidadeAdm':'id_ua','Unidade Administrativa':'ua','Nome do Módulo':'nome','Detalhamento':'detalhamento'})
+                  data['modulos'] = df.to_dict(orient='records')
 
           # Trava de segurança: Só salva se realmente encontrou dados
           if len(data['pessoas']) > 0:
@@ -66,12 +87,16 @@ jobs:
               print('Sucesso: data.json gerado com', len(data['pessoas']), 'pessoas!')
           else:
               print('Aviso: Nenhum dado extraído. Mantendo data.json anterior por segurança.')
-          "
+          PY
 
       - name: Salvar e Commit no GitHub
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
-          git add data.json
-          git commit -m "auto: atualização da planilha do OneDrive [$(date +'%Y-%m-%d %H:%M')]" || exit 0
-          git push
+          if [ -f data.json ]; then
+            git add data.json
+            git commit -m "auto: atualização da planilha do OneDrive [$(date +'%Y-%m-%d %H:%M')]" || echo "No changes to commit"
+            git push
+          else
+            echo "data.json not created; skipping commit"
+          fi
