@@ -8,70 +8,41 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: sincronizar-onedrive-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   update-data:
     runs-on: ubuntu-latest
     steps:
       - name: Baixar repositório
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - name: Configurar Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
-          python-version: '3.10'
+          python-version: '3.12'
+          cache: pip
 
       - name: Instalar dependências
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests pandas openpyxl
+        run: python -m pip install -r requirements.txt
 
       - name: Baixar planilha do OneDrive e gerar data.json
-        run: |
-          python -c "
-          import requests, pandas as pd, io, unicodedata, json
-
-          def norm(s):
-              return unicodedata.normalize('NFD', str(s)).encode('ascii', 'ignore').decode('utf-8').lower().strip()
-
-          ONEDRIVE_URL = 'https://1drv.ms/x/c/2C62B039F7F27235/IQC0sPfxiHBLRommd2UGb8aLAaGrLnl-5TF_topDMBLFWQQ?download=1'
-          data = {'pessoas': [], 'modulos': [], 'uas': [], 'uassist': []}
-
-          hdrs = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
-          res = requests.get(ONEDRIVE_URL, headers=hdrs, timeout=30)
-          if res.status_code == 200:
-              xls = pd.ExcelFile(io.BytesIO(res.content), engine='openpyxl')
-              for sheet_name in xls.sheet_names:
-                  name = norm(sheet_name)
-                  if 'pessoa' in name:
-                      df = pd.read_excel(xls, sheet_name=sheet_name, header=5).fillna('')
-                      df = df.rename(columns={'Nome':'nome','MASP':'masp','Vínculo':'vinculo','Setor / Unidade Administrativa':'setor','Módulo':'modulo','Tipo de Responsabilidade':'responsabilidade','Unidade Assistencial':'unidade_assistencial'})
-                      data['pessoas'] = df.to_dict(orient='records')
-                  elif 'uassist' in name:
-                      df = pd.read_excel(xls, sheet_name=sheet_name, header=5).fillna('')
-                      df = df.rename(columns={'ID_UnidadeAssist':'id','Sigla':'sigla','Nome':'nome'})
-                      data['uassist'] = df.to_dict(orient='records')
-                  elif 'cadastrar ua' == name:
-                      df = pd.read_excel(xls, sheet_name=sheet_name, header=5).fillna('')
-                      df = df.rename(columns={'ID_UnidadeAdm':'id','Sigla':'sigla','Nome':'nome'})
-                      data['uas'] = df.to_dict(orient='records')
-                  elif 'modulo' in name:
-                      df = pd.read_excel(xls, sheet_name=sheet_name, header=5).fillna('')
-                      df = df.rename(columns={'ID_Modulo':'id','Sigla UA':'sigla_ua','ID_UnidadeAdm':'id_ua','Unidade Administrativa':'ua','Nome do Módulo':'nome','Detalhamento':'detalhamento'})
-                      data['modulos'] = df.to_dict(orient='records')
-
-          # Trava de segurança: Só salva se realmente encontrou dados
-          if len(data['pessoas']) > 0:
-              with open('data.json', 'w', encoding='utf-8') as f:
-                  json.dump(data, f, ensure_ascii=False)
-              print('Sucesso: data.json gerado com', len(data['pessoas']), 'pessoas!')
-          else:
-              print('Aviso: Nenhum dado extraído. Mantendo data.json anterior por segurança.')
-          "
+        env:
+          ONEDRIVE_URL: ${{ secrets.ONEDRIVE_URL }}
+        run: python scripts/atualizar_dados.py
 
       - name: Salvar e Commit no GitHub
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
+          if git diff --quiet -- data.json; then
+            echo "A planilha foi validada, mas não houve alteração no data.json."
+            exit 0
+          fi
           git add data.json
-          git commit -m "auto: atualização da planilha do OneDrive [$(date +'%Y-%m-%d %H:%M')]" || exit 0
-          git push
+          git commit -m "auto: atualização da planilha do OneDrive [$(date +'%Y-%m-%d %H:%M')]"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

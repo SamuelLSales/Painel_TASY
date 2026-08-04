@@ -1674,7 +1674,7 @@ body.home-lock #page-home .home-content {
     <div class="table-wrap"><table><thead><tr><th>Nome</th><th>MASP</th><th>Vínculo</th><th>Setor</th><th>Módulo</th><th>Responsabilidade</th><th>Unidade Assistencial</th></tr></thead><tbody id="agent-rows"></tbody></table></div>
   </section>
 
-  <footer><div class="foot-text">FHEMIG — Fundação Hospitalar do Estado de Minas Gerais</div><div class="foot-text">Painel Governança TASY</div></footer>
+  <footer><div class="foot-text">FHEMIG — Fundação Hospitalar do Estado de Minas Gerais</div><div class="foot-text">Painel Governança TASY · <span id="data-status">Carregando dados...</span></div></footer>
 </div>
 
 <script>
@@ -1801,35 +1801,30 @@ uniq(DATA.modulos.map(m=>m.sigla_ua)).sort().forEach(v=>document.getElementById(
 
 <script>
 // ========================================================
-// INTEGRAÇÃO AO VIVO: Carregamento dinâmico de dados
+// INTEGRAÇÃO: data.json validado e publicado pelo GitHub Actions
 // ========================================================
-// O painel busca os dados do arquivo JSON local (Governanca_TASY_FHEMIG.json)
-// que fica ao lado deste HTML. Para atualizar os dados:
-//   1. O Power Automate exporta a planilha do SharePoint como JSON
-//   2. O JSON é salvo/substituído nesta mesma pasta
-//   3. O painel recarrega automaticamente a cada 60 segundos
+// O workflow baixa a planilha, valida todas as abas e substitui o
+// data.json. O painel usa somente esse arquivo para não misturar
+// versões ou fontes diferentes.
 // ========================================================
 
-const DATA_ENDPOINTS = ["./dados.php", "./Governanca_TASY_FHEMIG.json"];
-
-// Busca automática dos dados ao vivo (PHP proxy ou JSON local)
-async function carregarDadosAoVivo() {
-  for (const url of DATA_ENDPOINTS) {
-    try {
-      const response = await fetch(url + '?cb=' + new Date().getTime());
-      if (!response.ok) continue;
-      const data = await response.json();
-      if (data && data.pessoas && data.pessoas.length) {
-        DATA = data;
-        localStorage.setItem('PAINEL_TASY_CACHE', JSON.stringify(data));
-        renderizarPaginaAtual();
-        console.log("✅ Painel TASY: Dados atualizados ao vivo de " + url + " (" + data.pessoas.length + " pessoas carregadas)");
-        return;
-      }
-    } catch (e) {
-      continue;
-    }
+function atualizarStatusDados(meta, erro = false) {
+  const status = document.getElementById('data-status');
+  if (!status) return;
+  if (erro) {
+    status.textContent = 'não foi possível verificar a atualização';
+    status.title = String(erro);
+    return;
   }
+  const atualizadoEm = meta && meta.atualizado_em;
+  if (!atualizadoEm) {
+    status.textContent = 'dados carregados';
+    return;
+  }
+  const data = new Date(atualizadoEm);
+  status.textContent = Number.isNaN(data.getTime())
+    ? `dados atualizados em ${atualizadoEm}`
+    : `dados atualizados em ${data.toLocaleString('pt-BR')}`;
 }
 
 // Converte os dados do Excel (.xlsx) diretamente na memória do navegador
@@ -1877,39 +1872,61 @@ function processarArquivoExcel(file) {
 }
 
 async function carregarDadosAoVivo() {
-  // 1. Tenta carregar os dados instantâneos do data.json
   try {
-    const resLocal = await fetch('/data.json');
-    if (resLocal.ok) {
-      const localData = await resLocal.json();
-      if (localData.pessoas && localData.pessoas.length) DATA.pessoas = localData.pessoas;
-      if (localData.modulos && localData.modulos.length) DATA.modulos = localData.modulos;
-      if (localData.uas && localData.uas.length) DATA.uas = localData.uas;
-      if (localData.uassist && localData.uassist.length) DATA.uassist = localData.uassist;
-      renderizarPaginaAtual();
+    const resposta = await fetch(`/data.json?cb=${Date.now()}`, {
+      cache: 'no-store'
+    });
+    if (!resposta.ok) {
+      throw new Error(`Falha ao carregar data.json: HTTP ${resposta.status}`);
     }
-  } catch (e) {}
-
-  // 2. Consulta a função serverless para dados atualizados ao vivo do OneDrive
-  try {
-    let resLive = await fetch('/.netlify/functions/dados');
-    if (!resLive.ok) resLive = await fetch('/api/dados');
-    if (resLive.ok) {
-      const liveData = await resLive.json();
-      if (liveData.pessoas && liveData.pessoas.length) DATA.pessoas = liveData.pessoas;
-      if (liveData.modulos && liveData.modulos.length) DATA.modulos = liveData.modulos;
-      if (liveData.uas && liveData.uas.length) DATA.uas = liveData.uas;
-      if (liveData.uassist && liveData.uassist.length) DATA.uassist = liveData.uassist;
-      renderizarPaginaAtual();
+    const novosDados = await resposta.json();
+    const colecoes = ['pessoas', 'modulos', 'uas', 'uassist'];
+    const invalidas = colecoes.filter(
+      chave => !Array.isArray(novosDados[chave]) || novosDados[chave].length === 0
+    );
+    if (invalidas.length) {
+      throw new Error(`data.json incompleto: ${invalidas.join(', ')}`);
     }
-  } catch (e) {}
+    DATA = novosDados;
+    localStorage.setItem('PAINEL_TASY_CACHE', JSON.stringify(novosDados));
+    atualizarStatusDados(novosDados.meta);
+    renderizarPaginaAtual();
+    console.log(
+      `Painel TASY: ${novosDados.pessoas.length} registros carregados do data.json`
+    );
+  } catch (erro) {
+    console.error('Painel TASY:', erro);
+    try {
+      const cache = JSON.parse(localStorage.getItem('PAINEL_TASY_CACHE') || 'null');
+      const colecoes = ['pessoas', 'modulos', 'uas', 'uassist'];
+      if (cache && colecoes.every(chave => Array.isArray(cache[chave]) && cache[chave].length)) {
+        DATA = cache;
+        renderizarPaginaAtual();
+        atualizarStatusDados(cache.meta);
+        const status = document.getElementById('data-status');
+        if (status) {
+          status.textContent += ' (cache)';
+          status.title = String(erro);
+        }
+        return;
+      }
+    } catch (erroCache) {
+      console.error('Painel TASY: cache inválido', erroCache);
+    }
+    atualizarStatusDados(null, erro);
+  }
 }
 
 function inicializarPainelComDados() {
-  if (DATA && DATA.modulos && DATA.modulos.length) {
-    const filterSelect = document.getElementById('mod-area-filter');
-    if (filterSelect && filterSelect.options.length <= 1) {
-      uniq(DATA.modulos.map(m=>m.sigla_ua)).sort().forEach(v=>filterSelect.insertAdjacentHTML('beforeend',`<option>${esc(v)}</option>`));
+  const filterSelect = document.getElementById('mod-area-filter');
+  if (filterSelect && DATA && DATA.modulos) {
+    const selecionado = filterSelect.value;
+    filterSelect.innerHTML = '<option value="">Todas as áreas</option>';
+    uniq(DATA.modulos.map(m=>m.sigla_ua))
+      .sort()
+      .forEach(v=>filterSelect.insertAdjacentHTML('beforeend',`<option>${esc(v)}</option>`));
+    if ([...filterSelect.options].some(option => option.value === selecionado)) {
+      filterSelect.value = selecionado;
     }
   }
 }
@@ -1923,11 +1940,11 @@ function renderizarPaginaAtual() {
   }
 }
 
-// Carregamento automático: inicializa dados e atualiza a cada 60 segundos
+// Carregamento inicial e nova verificação a cada cinco minutos.
 document.addEventListener("DOMContentLoaded", () => {
   inicializarPainelComDados();
   carregarDadosAoVivo();
-  setInterval(carregarDadosAoVivo, 60 * 1000);
+  setInterval(carregarDadosAoVivo, 5 * 60 * 1000);
 });
 </script>
 
