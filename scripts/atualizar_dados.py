@@ -19,25 +19,59 @@ DEFAULT_ONEDRIVE_URL = (
     "https://1drv.ms/x/c/2C62B039F7F27235/"
     "IQBiLMh61Pn1SZGH0PGCZjLNAWnyqMmXevmXjoQD05R0YGQ?e=zEdRU9"
 )
+
 OUTPUT_PATH = Path("data.json")
 
 
 def normalizar(valor: object) -> str:
     texto = unicodedata.normalize("NFD", str(valor))
-    texto = texto.encode("ascii", "ignore").decode("utf-8").lower().strip()
+    texto = texto.encode("ascii", "ignore").decode("utf-8")
+    texto = texto.lower().strip()
+
     return re.sub(r"[^a-z0-9]+", "_", texto).strip("_")
 
 
 def nome_logico_aba(nome: str) -> str:
-    return re.sub(r"^\d+_", "", normalizar(nome))
+    nome_normalizado = normalizar(nome)
+
+    # Remove prefixos numéricos, como:
+    # 02_Cadastro_Pessoas -> cadastro_pessoas
+    return re.sub(r"^\d+_", "", nome_normalizado)
+
+
+def localizar_aba(
+    abas: dict[str, str],
+    *apelidos: str,
+) -> str | None:
+    for apelido in apelidos:
+        nome_encontrado = abas.get(apelido)
+
+        if nome_encontrado:
+            return nome_encontrado
+
+    return None
 
 
 def url_download(url: str) -> str:
     partes = urlsplit(url.strip())
-    parametros = dict(parse_qsl(partes.query, keep_blank_values=True))
+
+    parametros = dict(
+        parse_qsl(
+            partes.query,
+            keep_blank_values=True,
+        )
+    )
+
     parametros["download"] = "1"
+
     return urlunsplit(
-        (partes.scheme, partes.netloc, partes.path, urlencode(parametros), partes.fragment)
+        (
+            partes.scheme,
+            partes.netloc,
+            partes.path,
+            urlencode(parametros),
+            partes.fragment,
+        )
     )
 
 
@@ -50,6 +84,7 @@ def baixar_planilha(url: str) -> io.BytesIO:
             "AppleWebKit/537.36 Chrome/150 Safari/537.36"
         )
     }
+
     resposta = requests.get(
         url_download(url),
         headers=headers,
@@ -58,19 +93,33 @@ def baixar_planilha(url: str) -> io.BytesIO:
     )
 
     print("Status do download:", resposta.status_code)
-    print("Tipo de conteúdo:", resposta.headers.get("content-type", "não informado"))
-    print("Tamanho recebido:", len(resposta.content), "bytes")
+    print(
+        "Tipo de conteúdo:",
+        resposta.headers.get("content-type", "não informado"),
+    )
+    print(
+        "Tamanho recebido:",
+        len(resposta.content),
+        "bytes",
+    )
 
     resposta.raise_for_status()
+
     conteudo = io.BytesIO(resposta.content)
+
     if not zipfile.is_zipfile(conteudo):
-        inicio = resposta.content[:120].decode("utf-8", errors="replace")
+        inicio = resposta.content[:120].decode(
+            "utf-8",
+            errors="replace",
+        )
+
         raise RuntimeError(
             "O OneDrive não retornou um arquivo XLSX válido. "
             f"Início da resposta: {inicio!r}"
         )
 
     conteudo.seek(0)
+
     return conteudo
 
 
@@ -87,54 +136,121 @@ def ler_aba(
         header=5,
         dtype=object,
     ).fillna("")
-    tabela.columns = [normalizar(coluna) for coluna in tabela.columns]
-    tabela = tabela.rename(columns=mapa_colunas)
 
-    ausentes = [coluna for coluna in colunas_obrigatorias if coluna not in tabela.columns]
+    tabela.columns = [
+        normalizar(coluna)
+        for coluna in tabela.columns
+    ]
+
+    tabela = tabela.rename(
+        columns=mapa_colunas
+    )
+
+    ausentes = [
+        coluna
+        for coluna in colunas_obrigatorias
+        if coluna not in tabela.columns
+    ]
+
     if ausentes:
         raise RuntimeError(
-            f"A aba {nome_aba!r} não contém as colunas obrigatórias: {ausentes}"
+            f"A aba {nome_aba!r} não contém "
+            f"as colunas obrigatórias: {ausentes}. "
+            f"Colunas encontradas: {list(tabela.columns)}"
         )
 
     tabela = tabela[colunas_obrigatorias]
+
     tabela = tabela[
-        tabela[chave_linha].map(lambda valor: str(valor).strip() not in ("", "0"))
+        tabela[chave_linha].map(
+            lambda valor: str(valor).strip() not in ("", "0")
+        )
     ]
 
     registros: list[dict] = []
+
     for registro in tabela.to_dict(orient="records"):
-        limpo: dict = {}
+        registro_limpo: dict = {}
+
         for chave, valor in registro.items():
             if pd.isna(valor):
                 valor = ""
+
             elif hasattr(valor, "item"):
                 valor = valor.item()
+
             if isinstance(valor, float) and valor.is_integer():
                 valor = int(valor)
+
             if isinstance(valor, str):
                 valor = valor.strip()
-            limpo[chave] = valor
-        registros.append(limpo)
+
+            registro_limpo[chave] = valor
+
+        registros.append(registro_limpo)
+
     return registros
 
 
 def extrair_dados(planilha: io.BytesIO) -> dict:
-    excel = pd.ExcelFile(planilha, engine="openpyxl")
-    abas = {nome_logico_aba(nome): nome for nome in excel.sheet_names}
+    excel = pd.ExcelFile(
+        planilha,
+        engine="openpyxl",
+    )
 
-    esperadas = {
-        "cadastro_pessoas",
-        "cadastro_ua",
-        "cadastro_uassist",
-        "cadastro_modulos",
+    print(
+        "Abas encontradas:",
+        ", ".join(excel.sheet_names),
+    )
+
+    abas = {
+        nome_logico_aba(nome): nome
+        for nome in excel.sheet_names
     }
-    ausentes = sorted(esperadas - set(abas))
-    if ausentes:
-        raise RuntimeError(f"Abas obrigatórias não encontradas: {ausentes}")
+
+    abas_dados = {
+        "pessoas": localizar_aba(
+            abas,
+            "cadastrar_pessoas",
+            "cadastro_pessoas",
+            "pessoas",
+        ),
+        "ua": localizar_aba(
+            abas,
+            "cadastrar_ua",
+            "cadastro_ua",
+            "unid_administrativas",
+        ),
+        "uassist": localizar_aba(
+            abas,
+            "cadastrar_uassist",
+            "cadastro_uassist",
+            "unid_assistenciais",
+        ),
+        "modulos": localizar_aba(
+            abas,
+            "cadastrar_modulos",
+            "cadastro_modulos",
+            "modulos",
+        ),
+    }
+
+    abas_ausentes = sorted(
+        nome
+        for nome, aba_encontrada in abas_dados.items()
+        if not aba_encontrada
+    )
+
+    if abas_ausentes:
+        raise RuntimeError(
+            "Abas obrigatórias não encontradas: "
+            f"{abas_ausentes}. "
+            f"Abas disponíveis: {excel.sheet_names}"
+        )
 
     pessoas = ler_aba(
         excel,
-        abas["cadastro_pessoas"],
+        abas_dados["pessoas"],
         {
             "nome": "nome",
             "masp": "masp",
@@ -158,31 +274,39 @@ def extrair_dados(planilha: io.BytesIO) -> dict:
 
     unidades_administrativas = ler_aba(
         excel,
-        abas["cadastro_ua"],
+        abas_dados["ua"],
         {
             "id_unidadeadm": "id",
             "sigla": "sigla",
             "nome": "nome",
         },
-        ["id", "sigla", "nome"],
+        [
+            "id",
+            "sigla",
+            "nome",
+        ],
         "sigla",
     )
 
     unidades_assistenciais = ler_aba(
         excel,
-        abas["cadastro_uassist"],
+        abas_dados["uassist"],
         {
             "id_unidadeassist": "id",
             "sigla": "sigla",
             "nome": "nome",
         },
-        ["id", "sigla", "nome"],
+        [
+            "id",
+            "sigla",
+            "nome",
+        ],
         "sigla",
     )
 
     modulos = ler_aba(
         excel,
-        abas["cadastro_modulos"],
+        abas_dados["modulos"],
         {
             "id_modulo": "id",
             "sigla_ua": "sigla_ua",
@@ -191,7 +315,14 @@ def extrair_dados(planilha: io.BytesIO) -> dict:
             "nome_do_modulo": "nome",
             "detalhamento": "detalhamento",
         },
-        ["id", "sigla_ua", "id_ua", "ua", "nome", "detalhamento"],
+        [
+            "id",
+            "sigla_ua",
+            "id_ua",
+            "ua",
+            "nome",
+            "detalhamento",
+        ],
         "nome",
     )
 
@@ -214,38 +345,70 @@ def extrair_dados(planilha: io.BytesIO) -> dict:
         "uassist": unidades_assistenciais,
     }
 
-    vazias = [
+    colecoes_vazias = [
         chave
-        for chave in ("pessoas", "modulos", "uas", "uassist")
+        for chave in (
+            "pessoas",
+            "modulos",
+            "uas",
+            "uassist",
+        )
         if not dados[chave]
     ]
-    if vazias:
+
+    if colecoes_vazias:
         raise RuntimeError(
-            "A atualização foi cancelada porque estas coleções ficaram vazias: "
-            + ", ".join(vazias)
+            "A atualização foi cancelada porque estas "
+            "coleções ficaram vazias: "
+            + ", ".join(colecoes_vazias)
         )
+
     return dados
 
 
 def main() -> int:
-    url = os.environ.get("ONEDRIVE_URL", "").strip() or DEFAULT_ONEDRIVE_URL
+    url = (
+        os.environ.get("ONEDRIVE_URL", "").strip()
+        or DEFAULT_ONEDRIVE_URL
+    )
+
     try:
-        dados = extrair_dados(baixar_planilha(url))
-        temporario = OUTPUT_PATH.with_suffix(".json.tmp")
-        temporario.write_text(
-            json.dumps(dados, ensure_ascii=False, indent=2),
+        planilha = baixar_planilha(url)
+        dados = extrair_dados(planilha)
+
+        arquivo_temporario = OUTPUT_PATH.with_suffix(
+            ".json.tmp"
+        )
+
+        arquivo_temporario.write_text(
+            json.dumps(
+                dados,
+                ensure_ascii=False,
+                indent=2,
+            ),
             encoding="utf-8",
         )
-        temporario.replace(OUTPUT_PATH)
+
+        arquivo_temporario.replace(OUTPUT_PATH)
+
     except Exception as erro:
-        print(f"ERRO: {erro}", file=sys.stderr)
+        print(
+            f"ERRO: {erro}",
+            file=sys.stderr,
+        )
+
         return 1
 
     quantidades = dados["meta"]["quantidades"]
+
     print(
         "data.json atualizado com sucesso:",
-        ", ".join(f"{chave}={valor}" for chave, valor in quantidades.items()),
+        ", ".join(
+            f"{chave}={valor}"
+            for chave, valor in quantidades.items()
+        ),
     )
+
     return 0
 
 
