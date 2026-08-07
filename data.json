@@ -1,7 +1,7 @@
 {
   "meta": {
-    "atualizado_em": null,
-    "origem": "data.json existente",
+    "atualizado_em": "2026-08-07T09:40:48-03:00",
+    "origem": "OneDrive",
     "quantidades": {
       "pessoas": 736,
       "modulos": 40,
@@ -23,10 +23,10 @@
       "nome": "Adileia Granato",
       "masp": 14443584,
       "vinculo": "Efetivo",
-      "setor": "",
-      "modulo": "",
-      "responsabilidade": "",
-      "unidade_assistencial": ""
+      "setor": "AEST",
+      "modulo": "Central de Material e Esterilização (CME) - patrimônio",
+      "responsabilidade": "Área Técnica",
+      "unidade_assistencial": "CHB"
     },
     {
       "nome": "Adriana Monferrari Amorim",
@@ -2288,7 +2288,7 @@
       "unidade_assistencial": "CSSI"
     },
     {
-      "nome": "Fabiana Borges Resende Conceição ",
+      "nome": "Fabiana Borges Resende Conceição",
       "masp": 12847448,
       "vinculo": "Efetivo",
       "setor": "DIRASS",
@@ -6641,8 +6641,8 @@
       "sigla_ua": "AEST",
       "id_ua": "UA_AEST",
       "ua": "Assessoria de Gestão Estratégica e de Projetos",
-      "nome": "Qualidade - indicadores, documentos e Relatórios de não conformidades (RNC) ",
-      "detalhamento": "Permite o gerenciamento do sistema de gestão da qualidade, incluindo o controle de documentos, de auditorias e de ações. Caracteriza-se como um mecanismo de controle e gerenciamento para a busca e manutenção de certificações e acreditações. "
+      "nome": "Qualidade - indicadores, documentos e Relatórios de não conformidades (RNC)",
+      "detalhamento": "Permite o gerenciamento do sistema de gestão da qualidade, incluindo o controle de documentos, de auditorias e de ações. Caracteriza-se como um mecanismo de controle e gerenciamento para a busca e manutenção de certificações e acreditações."
     },
     {
       "id": "MOD002",
@@ -6666,7 +6666,7 @@
       "id_ua": "UA_DIRASS",
       "ua": "Diretoria Assistencial",
       "nome": "Internação e gestão do leito",
-      "detalhamento": "Destina-se ao atendimento do paciente, a partir de lançamento da entrada na instituição, o acompanhamento da sua movimentação, incluindo demandas de navegação decorrentes da internação do paciente, e seu processo de alta. Além disso, dá a visão geral da ocupação da instituição, bem como gerencia todas as vagas existentes. "
+      "detalhamento": "Destina-se ao atendimento do paciente, a partir de lançamento da entrada na instituição, o acompanhamento da sua movimentação, incluindo demandas de navegação decorrentes da internação do paciente, e seu processo de alta. Além disso, dá a visão geral da ocupação da instituição, bem como gerencia todas as vagas existentes."
     },
     {
       "id": "MOD005",
@@ -6674,55 +6674,55 @@
       "id_ua": "UA_DIRASS",
       "ua": "Diretoria Assistencial",
       "nome": "Prontuário Eletrônico do Paciente - PEP",
-      "detalhamento": "Reúne todas as informações registradas referentes aos atendimentos prestados ao paciente. O acesso a essas informações é feito de acordo com o perfil de cada profissional, permitindo a ação direta de médicos, enfermeiros, fisioterapeutas, nutricionistas, entre outros profissionais de saúde. "
+      "detalhamento": "Reúne todas as informações registradas referentes aos atendimentos prestados ao paciente. O acesso a essas informações é feito de acordo com o perfil de cada profissional, permitindo a ação direta de médicos, enfermeiros, fisioterapeutas, nutricionistas, entre outros profissionais de saúde."
     },
     {
       "id": "MOD006",
       "sigla_ua": "DIRASS",
       "id_ua": "UA_DIRASS",
       "ua": "Diretoria Assistencial",
-      "nome": "Prescrição Eletrônica ",
-      "detalhamento": "Utilizado para o registro eletrônico de diferentes prescrições (medicamentos, materiais, procedimentos, entre outros), permitindo a geração de um plano terapêutico para o paciente. É a partir da integração da prescrição com outros módulos do Sistema Tasy que é possível dar seguimento aos processos clínicos e assistenciais. "
+      "nome": "Prescrição Eletrônica",
+      "detalhamento": "Utilizado para o registro eletrônico de diferentes prescrições (medicamentos, materiais, procedimentos, entre outros), permitindo a geração de um plano terapêutico para o paciente. É a partir da integração da prescrição com outros módulos do Sistema Tasy que é possível dar seguimento aos processos clínicos e assistenciais."
     },
     {
       "id": "MOD007",
       "sigla_ua": "DIRASS",
       "id_ua": "UA_DIRASS",
       "ua": "Diretoria Assistencial",
-      "nome": "Home Care (Internação Domiciliar - apoio para registro SAD/EMAD) ",
-      "detalhamento": "Possibilita a gestão dos atendimentos domiciliares, administrando toda a estrutura e suporte profissional, de acordo com as necessidades apresentadas para cada paciente. "
+      "nome": "Home Care (Internação Domiciliar - apoio para registro SAD/EMAD)",
+      "detalhamento": "Possibilita a gestão dos atendimentos domiciliares, administrando toda a estrutura e suporte profissional, de acordo com as necessidades apresentadas para cada paciente."
     },
     {
       "id": "MOD008",
       "sigla_ua": "DIRASS",
       "id_ua": "UA_DIRASS",
       "ua": "Diretoria Assistencial",
-      "nome": "Farmácia ",
-      "detalhamento": "Contempla todos os processos relacionados ao atendimento de prescrições e dispensação de materiais e medicamentos. Além disso, permite ao farmacêutico realizar a gestão das prescrições, bem como controlar os aspectos administrativos do setor. "
+      "nome": "Farmácia",
+      "detalhamento": "Contempla todos os processos relacionados ao atendimento de prescrições e dispensação de materiais e medicamentos. Além disso, permite ao farmacêutico realizar a gestão das prescrições, bem como controlar os aspectos administrativos do setor."
     },
     {
       "id": "MOD009",
       "sigla_ua": "DIRASS",
       "id_ua": "UA_DIRASS",
       "ua": "Diretoria Assistencial",
-      "nome": "Enfermagem ",
-      "detalhamento": "Apresenta um conjunto de ferramentas que auxiliam a equipe assistencial na gestão das unidades e dos pacientes em atendimento. "
+      "nome": "Enfermagem",
+      "detalhamento": "Apresenta um conjunto de ferramentas que auxiliam a equipe assistencial na gestão das unidades e dos pacientes em atendimento."
     },
     {
       "id": "MOD010",
       "sigla_ua": "DIRASS",
       "id_ua": "UA_DIRASS",
       "ua": "Diretoria Assistencial",
-      "nome": "Pronto Atendimento ",
-      "detalhamento": "Gerencia o atendimento de pacientes de pronto atendimento, organizando o fluxo de trabalho dos profissionais envolvidos nesse processo. "
+      "nome": "Pronto Atendimento",
+      "detalhamento": "Gerencia o atendimento de pacientes de pronto atendimento, organizando o fluxo de trabalho dos profissionais envolvidos nesse processo."
     },
     {
       "id": "MOD011",
       "sigla_ua": "DIRASS",
       "id_ua": "UA_DIRASS",
       "ua": "Diretoria Assistencial",
-      "nome": "Centro Cirúrgico ",
-      "detalhamento": "Destina-se ao gerenciamento dos processos relacionados ao pré, trans e pós-operatório, contemplando as atividades de diferentes profissionais envolvidos com o centro cirúrgico e material médico hospitalar. "
+      "nome": "Centro Cirúrgico",
+      "detalhamento": "Destina-se ao gerenciamento dos processos relacionados ao pré, trans e pós-operatório, contemplando as atividades de diferentes profissionais envolvidos com o centro cirúrgico e material médico hospitalar."
     },
     {
       "id": "MOD012",
@@ -6730,7 +6730,7 @@
       "id_ua": "UA_DIRASS",
       "ua": "Diretoria Assistencial",
       "nome": "Central de Material e Esterilização (CME) - Assistencial",
-      "detalhamento": "Permite a gestão das atividades da CME da instituição, bem como a composição de todos os kits/conjuntos. Além disso, é possível gerenciar e acompanhar todas as fases do processo de esterilização. "
+      "detalhamento": "Permite a gestão das atividades da CME da instituição, bem como a composição de todos os kits/conjuntos. Além disso, é possível gerenciar e acompanhar todas as fases do processo de esterilização."
     },
     {
       "id": "MOD013",
@@ -6738,47 +6738,47 @@
       "id_ua": "UA_DIRASS",
       "ua": "Diretoria Assistencial",
       "nome": "Comissão de Controle de Infecção Hospitalar (CCIH)",
-      "detalhamento": "Destinado ao gerenciamento do serviço de CCIH, permitindo o registro, o acompanhamento e o controle dos antimicrobianos e dos indicadores de infecção. Além disso, fornece ferramentas para a prevenção das ocorrências de infecção hospitalar. "
+      "detalhamento": "Destinado ao gerenciamento do serviço de CCIH, permitindo o registro, o acompanhamento e o controle dos antimicrobianos e dos indicadores de infecção. Além disso, fornece ferramentas para a prevenção das ocorrências de infecção hospitalar."
     },
     {
       "id": "MOD014",
       "sigla_ua": "DIRASS",
       "id_ua": "UA_DIRASS",
       "ua": "Diretoria Assistencial",
-      "nome": "Laboratório ",
-      "detalhamento": "Permite o gerenciamento de diversos tipos de exames de análises clínicas, contemplando o planejamento, a execução e o controle de todo o processo de realização do exame até a entrega dos resultados. "
+      "nome": "Laboratório",
+      "detalhamento": "Permite o gerenciamento de diversos tipos de exames de análises clínicas, contemplando o planejamento, a execução e o controle de todo o processo de realização do exame até a entrega dos resultados."
     },
     {
       "id": "MOD015",
       "sigla_ua": "DIRASS",
       "id_ua": "UA_DIRASS",
       "ua": "Diretoria Assistencial",
-      "nome": "Exames ",
-      "detalhamento": "Permite o gerenciamento completo dos mais diversos tipos de exames de imagem, contemplando o planejamento, a execução e o controle de todo o processo de realização do exame até a entrega dos resultados. "
+      "nome": "Exames",
+      "detalhamento": "Permite o gerenciamento completo dos mais diversos tipos de exames de imagem, contemplando o planejamento, a execução e o controle de todo o processo de realização do exame até a entrega dos resultados."
     },
     {
       "id": "MOD016",
       "sigla_ua": "DIRASS",
       "id_ua": "UA_DIRASS",
       "ua": "Diretoria Assistencial",
-      "nome": "Anatomia Patológica ",
-      "detalhamento": "Permite a gestão de exames anatomo patológicos, contemplando todo o fluxo de produção do exame: do recebimento da amostra à emissão do laudo. "
+      "nome": "Anatomia Patológica",
+      "detalhamento": "Permite a gestão de exames anatomo patológicos, contemplando todo o fluxo de produção do exame: do recebimento da amostra à emissão do laudo."
     },
     {
       "id": "MOD017",
       "sigla_ua": "DIRASS",
       "id_ua": "UA_DIRASS",
       "ua": "Diretoria Assistencial",
-      "nome": "Hemoterapia ",
-      "detalhamento": "Destina-se à gestão de agências transfusionais e assistências hemoterápicas, abrangendo todas as etapas desde a coleta até a dispensação dos hemocomponentes. "
+      "nome": "Hemoterapia",
+      "detalhamento": "Destina-se à gestão de agências transfusionais e assistências hemoterápicas, abrangendo todas as etapas desde a coleta até a dispensação dos hemocomponentes."
     },
     {
       "id": "MOD018",
       "sigla_ua": "DIRASS",
       "id_ua": "UA_DIRASS",
       "ua": "Diretoria Assistencial",
-      "nome": "Nutrição ",
-      "detalhamento": "Permite aos profissionais realizar a assistência nutricional, possibilitando o planejamento de dietas individualizadas. Além disso, dá condições para o gerenciamento de toda a estrutura relacionada ao serviço de nutrição. "
+      "nome": "Nutrição",
+      "detalhamento": "Permite aos profissionais realizar a assistência nutricional, possibilitando o planejamento de dietas individualizadas. Além disso, dá condições para o gerenciamento de toda a estrutura relacionada ao serviço de nutrição."
     },
     {
       "id": "MOD019",
@@ -6786,71 +6786,71 @@
       "id_ua": "UA_DIRASS",
       "ua": "Diretoria Assistencial",
       "nome": "Suporte à Decisão Clínica (SDC) - Módulo Mentor Tasy",
-      "detalhamento": "SDC – Mentor é voltada para a realização de cadastros de regras e eventos que levará a geração de processos quando os profissionais realizarem registros ao paciente, permitindo apoio à decisão e a geração de protocolos de forma automática na função Mentor. \nTem como objetivo auxiliar os profissionais e seus gestores através de lembretes, conselhos ou interpretações específicas para uma determinada situação em um determinado momento, apoiando no diagnóstico e procedimentos clínicos para o tratamento, assim como na promoção de \"melhores práticas”. "
+      "detalhamento": "SDC – Mentor é voltada para a realização de cadastros de regras e eventos que levará a geração de processos quando os profissionais realizarem registros ao paciente, permitindo apoio à decisão e a geração de protocolos de forma automática na função Mentor. \nTem como objetivo auxiliar os profissionais e seus gestores através de lembretes, conselhos ou interpretações específicas para uma determinada situação em um determinado momento, apoiando no diagnóstico e procedimentos clínicos para o tratamento, assim como na promoção de \"melhores práticas”."
     },
     {
       "id": "MOD020",
       "sigla_ua": "DIRASS",
       "id_ua": "UA_DIRASS",
       "ua": "Diretoria Assistencial",
-      "nome": "Qualidade - Segurança do paciente ",
-      "detalhamento": "Permite o gerenciamento do sistema de gestão da qualidade, focalizado na segurança assistencial do paciente. "
+      "nome": "Qualidade - Segurança do paciente",
+      "detalhamento": "Permite o gerenciamento do sistema de gestão da qualidade, focalizado na segurança assistencial do paciente."
     },
     {
       "id": "MOD021",
       "sigla_ua": "DIRASS",
       "id_ua": "UA_DIRASS",
       "ua": "Diretoria Assistencial",
-      "nome": "Agendas ",
-      "detalhamento": "Permite o gerenciamento das principais agendas do sistema, como Agenda de Exames, de Serviços, de Cirurgias e de Consultas. "
+      "nome": "Agendas",
+      "detalhamento": "Permite o gerenciamento das principais agendas do sistema, como Agenda de Exames, de Serviços, de Cirurgias e de Consultas."
     },
     {
       "id": "MOD022",
       "sigla_ua": "DIRASS",
       "id_ua": "UA_DIRASS",
       "ua": "Diretoria Assistencial",
-      "nome": "Estoque  (medicamentos, material médico hospitalar, insumos e produtos de saúde) ",
-      "detalhamento": "Possibilita a gestão de materiais ao disponibilizar ferramentas de controle, permitindo o gerenciamento dos níveis de estoque. "
+      "nome": "Estoque  (medicamentos, material médico hospitalar, insumos e produtos de saúde)",
+      "detalhamento": "Possibilita a gestão de materiais ao disponibilizar ferramentas de controle, permitindo o gerenciamento dos níveis de estoque."
     },
     {
       "id": "MOD023",
       "sigla_ua": "DPAR",
       "id_ua": "UA_DPAR",
       "ua": "Diretoria de Contratualização, Informações e Parcerias",
-      "nome": "Gestão de autorizações ",
-      "detalhamento": "Permite o gerenciamento das mais diversas autorizações, controlando todo o processo, desde a abertura até a sua conclusão. "
+      "nome": "Gestão de autorizações",
+      "detalhamento": "Permite o gerenciamento das mais diversas autorizações, controlando todo o processo, desde a abertura até a sua conclusão."
     },
     {
       "id": "MOD024",
       "sigla_ua": "DPAR",
       "id_ua": "UA_DPAR",
       "ua": "Diretoria de Contratualização, Informações e Parcerias",
-      "nome": "Auditoria de contas faturadas ",
-      "detalhamento": "Permite que seja feita a análise dos itens lançados na conta do paciente, objetivando o correto faturamento. "
+      "nome": "Auditoria de contas faturadas",
+      "detalhamento": "Permite que seja feita a análise dos itens lançados na conta do paciente, objetivando o correto faturamento."
     },
     {
       "id": "MOD025",
       "sigla_ua": "DPAR",
       "id_ua": "UA_DPAR",
       "ua": "Diretoria de Contratualização, Informações e Parcerias",
-      "nome": "Faturamento ",
-      "detalhamento": "Abrange a execução e o controle das contas de pacientes internados pelo Sistema Único de Saúde, possibilitando o faturamento, de acordo com as exigências do SUS, bem como o gerenciamento das receitas obtidas. "
+      "nome": "Faturamento",
+      "detalhamento": "Abrange a execução e o controle das contas de pacientes internados pelo Sistema Único de Saúde, possibilitando o faturamento, de acordo com as exigências do SUS, bem como o gerenciamento das receitas obtidas."
     },
     {
       "id": "MOD026",
       "sigla_ua": "DPAR",
       "id_ua": "UA_DPAR",
       "ua": "Diretoria de Contratualização, Informações e Parcerias",
-      "nome": "SUS (módulo complementar do faturamento) ",
-      "detalhamento": "Permite o gerenciamento e acompanhamento do faturamento SUS-AIH, SUS-BPA, APAC dentre outras opções e funções relacionadas ao SUS. "
+      "nome": "SUS (módulo complementar do faturamento)",
+      "detalhamento": "Permite o gerenciamento e acompanhamento do faturamento SUS-AIH, SUS-BPA, APAC dentre outras opções e funções relacionadas ao SUS."
     },
     {
       "id": "MOD027",
       "sigla_ua": "DPAR",
       "id_ua": "UA_DPAR",
       "ua": "Diretoria de Contratualização, Informações e Parcerias",
-      "nome": "Custos ",
-      "detalhamento": "Fornece informações gerenciais a partir da apuração de todos os custos da organização, atendendo a diferentes metodologias utilizadas na área da saúde. "
+      "nome": "Custos",
+      "detalhamento": "Fornece informações gerenciais a partir da apuração de todos os custos da organização, atendendo a diferentes metodologias utilizadas na área da saúde."
     },
     {
       "id": "MOD028",
@@ -6865,72 +6865,72 @@
       "sigla_ua": "DPGF",
       "id_ua": "UA_DPGF",
       "ua": "Diretoria de Planejamento, Gestão e Finanças",
-      "nome": "Administração de Contratos ",
-      "detalhamento": "Permite o cadastro e gerenciamento de contratos. "
+      "nome": "Administração de Contratos",
+      "detalhamento": "Permite o cadastro e gerenciamento de contratos."
     },
     {
       "id": "MOD030",
       "sigla_ua": "DPGF",
       "id_ua": "UA_DPGF",
       "ua": "Diretoria de Planejamento, Gestão e Finanças",
-      "nome": "Recepção e Visitas ",
-      "detalhamento": "Destina-se ao controle de entrada do paciente na instituição e visita aos pacientes e setores da instituição. "
+      "nome": "Recepção e Visitas",
+      "detalhamento": "Destina-se ao controle de entrada do paciente na instituição e visita aos pacientes e setores da instituição."
     },
     {
       "id": "MOD031",
       "sigla_ua": "DPGF",
       "id_ua": "UA_DPGF",
       "ua": "Diretoria de Planejamento, Gestão e Finanças",
-      "nome": "Almoxarifado ",
-      "detalhamento": "Controla as entradas e saídas dos itens da instituição, contemplando o processo de disponibilização de materiais de almoxarifado aos demais setores. "
+      "nome": "Almoxarifado",
+      "detalhamento": "Controla as entradas e saídas dos itens da instituição, contemplando o processo de disponibilização de materiais de almoxarifado aos demais setores."
     },
     {
       "id": "MOD032",
       "sigla_ua": "DPGF",
       "id_ua": "UA_DPGF",
       "ua": "Diretoria de Planejamento, Gestão e Finanças",
-      "nome": "Compras ",
-      "detalhamento": "Destina-se ao planejamento, execução e controle de todo o processo de compra, desde a solicitação até o seu fechamento. "
+      "nome": "Compras",
+      "detalhamento": "Destina-se ao planejamento, execução e controle de todo o processo de compra, desde a solicitação até o seu fechamento."
     },
     {
       "id": "MOD033",
       "sigla_ua": "DPGF",
       "id_ua": "UA_DPGF",
       "ua": "Diretoria de Planejamento, Gestão e Finanças",
-      "nome": "Patrimônio ",
-      "detalhamento": "Permite o gerenciamento de todos os bens da instituição e o controle das suas movimentações. Além disso, permite o cálculo da depreciação, integrando esses dados diretamente à contabilidade. "
+      "nome": "Patrimônio",
+      "detalhamento": "Permite o gerenciamento de todos os bens da instituição e o controle das suas movimentações. Além disso, permite o cálculo da depreciação, integrando esses dados diretamente à contabilidade."
     },
     {
       "id": "MOD034",
       "sigla_ua": "DPGF",
       "id_ua": "UA_DPGF",
       "ua": "Diretoria de Planejamento, Gestão e Finanças",
-      "nome": "Manutenção ",
-      "detalhamento": "Permite o controle e o gerenciamento do parque de equipamentos, dentro dos conceitos de manutenção preventiva, corretiva e planejada. Esse módulo foi desenvolvido especificamente para a área da saúde, contemplando os recursos necessários a essas instituições, sendo de fácil utilização e permitindo elevado nível de controle. "
+      "nome": "Manutenção",
+      "detalhamento": "Permite o controle e o gerenciamento do parque de equipamentos, dentro dos conceitos de manutenção preventiva, corretiva e planejada. Esse módulo foi desenvolvido especificamente para a área da saúde, contemplando os recursos necessários a essas instituições, sendo de fácil utilização e permitindo elevado nível de controle."
     },
     {
       "id": "MOD035",
       "sigla_ua": "DPGF",
       "id_ua": "UA_DPGF",
       "ua": "Diretoria de Planejamento, Gestão e Finanças",
-      "nome": "Manutenção (equipamentos médicos) ",
-      "detalhamento": "Permite o controle e o gerenciamento do parque de equipamentos, dentro dos conceitos de manutenção preventiva, corretiva e planejada. Esse módulo foi desenvolvido especificamente para a área da saúde, contemplando os recursos necessários a essas instituições, sendo de fácil utilização e permitindo elevado nível de controle. "
+      "nome": "Manutenção (equipamentos médicos)",
+      "detalhamento": "Permite o controle e o gerenciamento do parque de equipamentos, dentro dos conceitos de manutenção preventiva, corretiva e planejada. Esse módulo foi desenvolvido especificamente para a área da saúde, contemplando os recursos necessários a essas instituições, sendo de fácil utilização e permitindo elevado nível de controle."
     },
     {
       "id": "MOD036",
       "sigla_ua": "DPGF",
       "id_ua": "UA_DPGF",
       "ua": "Diretoria de Planejamento, Gestão e Finanças",
-      "nome": "Higienização ",
-      "detalhamento": "Permite o gerenciamento completo dos serviços de higienização, contemplando o mapeamento dos leitos e a definição dos profissionais responsáveis, sendo uma importante ferramenta para a eficiência operacional. "
+      "nome": "Higienização",
+      "detalhamento": "Permite o gerenciamento completo dos serviços de higienização, contemplando o mapeamento dos leitos e a definição dos profissionais responsáveis, sendo uma importante ferramenta para a eficiência operacional."
     },
     {
       "id": "MOD037",
       "sigla_ua": "DPGF",
       "id_ua": "UA_DPGF",
       "ua": "Diretoria de Planejamento, Gestão e Finanças",
-      "nome": "Rouparia ",
-      "detalhamento": "Permite o controle de toda a movimentação das roupas utilizadas na instituição "
+      "nome": "Rouparia",
+      "detalhamento": "Permite o controle de toda a movimentação das roupas utilizadas na instituição"
     },
     {
       "id": "MOD038",
@@ -6938,7 +6938,7 @@
       "id_ua": "UA_DPGF",
       "ua": "Diretoria de Planejamento, Gestão e Finanças",
       "nome": "Central de Material e Esterilização (CME) - patrimônio",
-      "detalhamento": "Responsável pela entrada de carga patrimonial de materiais do CME. "
+      "detalhamento": "Responsável pela entrada de carga patrimonial de materiais do CME."
     },
     {
       "id": "MOD039",
@@ -6946,7 +6946,7 @@
       "id_ua": "UA_DPGF",
       "ua": "Diretoria de Planejamento, Gestão e Finanças",
       "nome": "Serviço de Arquivo Médico e Estatística (SAME) - gestão documental",
-      "detalhamento": "Gerenciamento de todos os prontuários arquivados, garantindo o controle sobre suas movimentações e locais de armazenamento. "
+      "detalhamento": "Gerenciamento de todos os prontuários arquivados, garantindo o controle sobre suas movimentações e locais de armazenamento."
     },
     {
       "id": "MOD040",
