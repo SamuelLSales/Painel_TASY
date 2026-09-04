@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "2026-08-07T10:04:07-03:00",
+    "atualizado_em": "2026-09-04T11:32:36-03:00",
     "origem": "OneDrive",
     "quantidades": {
       "pessoas": 736,
@@ -1847,8 +1847,8 @@
       "unidade_assistencial": "CSSI"
     },
     {
-      "nome": "Débora Talita Dantzger Torresilha Vasconcelos",
-      "masp": 13432174,
+      "nome": "Edvane Luiza",
+      "masp": "",
       "vinculo": "Efetivo",
       "setor": "DIRASS",
       "modulo": "Enfermagem",
@@ -4502,8 +4502,8 @@
       "unidade_assistencial": "HEM"
     },
     {
-      "nome": "Maísa Aparecida Ribeiro",
-      "masp": 12817706,
+      "nome": "Patrícia Valadares",
+      "masp": "",
       "vinculo": "Efetivo",
       "setor": "DIRASS",
       "modulo": "Internação e gestão do leito",
@@ -4511,8 +4511,8 @@
       "unidade_assistencial": ""
     },
     {
-      "nome": "Maísa Aparecida Ribeiro",
-      "masp": 12817706,
+      "nome": "Patrícia Valadares",
+      "masp": "",
       "vinculo": "Efetivo",
       "setor": "DIRASS",
       "modulo": "Prontuário Eletrônico do Paciente - PEP",
@@ -4520,8 +4520,8 @@
       "unidade_assistencial": ""
     },
     {
-      "nome": "Maísa Aparecida Ribeiro",
-      "masp": 12817706,
+      "nome": "Patrícia Valadares",
+      "masp": "",
       "vinculo": "Efetivo",
       "setor": "DIRASS",
       "modulo": "Prescrição Eletrônica",
@@ -4529,8 +4529,8 @@
       "unidade_assistencial": ""
     },
     {
-      "nome": "Maísa Aparecida Ribeiro",
-      "masp": 12817706,
+      "nome": "Patrícia Valadares",
+      "masp": "",
       "vinculo": "Efetivo",
       "setor": "DIRASS",
       "modulo": "Suporte à Decisão Clínica (SDC) - Módulo Mentor Tasy",
@@ -4538,8 +4538,8 @@
       "unidade_assistencial": ""
     },
     {
-      "nome": "Maísa Aparecida Ribeiro",
-      "masp": 12817706,
+      "nome": "Patrícia Valadares",
+      "masp": "",
       "vinculo": "Efetivo",
       "setor": "DIRASS",
       "modulo": "Agendas",
