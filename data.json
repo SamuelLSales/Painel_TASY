@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "2026-09-04T11:32:36-03:00",
+    "atualizado_em": "2026-09-14T20:34:54-03:00",
     "origem": "OneDrive",
     "quantidades": {
       "pessoas": 736,
@@ -1620,6 +1620,15 @@
       "modulo": "Serviço de Arquivo Médico e Estatística (SAME) Estatística (ADC)",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "MOV"
+    },
+    {
+      "nome": "Daniela Cristiny Paiva Gomes",
+      "masp": 13696760,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Prontuário Eletrônico do Paciente - PEP",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "CHB"
     },
     {
       "nome": "Daniela Neto Ferreira Melki",
@@ -6516,15 +6525,6 @@
       "modulo": "Estoque  (medicamentos, material médico hospitalar, insumos e produtos de saú...",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "MOV"
-    },
-    {
-      "nome": "Winton Arnaldo Do Nascimento",
-      "masp": 10911402,
-      "vinculo": "Efetivo",
-      "setor": "DPGF",
-      "modulo": "Almoxarifado",
-      "responsabilidade": "Usuário-Chave",
-      "unidade_assistencial": "CHB"
     },
     {
       "nome": "Yan Tessari",
