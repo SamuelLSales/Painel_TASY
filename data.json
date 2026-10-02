@@ -1,9 +1,9 @@
 {
   "meta": {
-    "atualizado_em": "2026-10-02T12:57:18-03:00",
+    "atualizado_em": "2026-10-02T13:15:13-03:00",
     "origem": "OneDrive",
     "quantidades": {
-      "pessoas": 857,
+      "pessoas": 858,
       "modulos": 40,
       "uas": 5,
       "uassist": 14
@@ -2718,6 +2718,15 @@
       "modulo": "Home Care (Internação Domiciliar - apoio para registro SAD/EMAD)",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CSSI"
+    },
+    {
+      "nome": "Fabiana Ceolin Barbosa Portes",
+      "masp": 12950697,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Enfermagem",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "CHB"
     },
     {
       "nome": "Fabiane Melo Da Silva",
