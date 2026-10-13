@@ -1668,10 +1668,10 @@ body.home-lock #page-home .home-content {
       <div class="role-card uc"><h3>Usuário-Chave</h3><p>Profissional de referência operacional, com domínio da rotina local e apoio aos demais usuários.</p></div>
     </div>
     <div class="search-row">
-      <div class="search-box"><input id="agent-search" placeholder="Buscar por nome, MASP, módulo, setor ou unidade..." oninput="renderAgents()"></div>
+      <div class="search-box"><input id="agent-search" placeholder="Buscar por nome, MASP, módulo, unidade ou área técnica..." oninput="renderAgents()"></div>
       <select class="filter-select" id="agent-role" onchange="renderAgents()"><option value="">Todas as responsabilidades</option></select>
     </div>
-    <div class="table-wrap"><table><thead><tr><th>Nome</th><th>MASP</th><th>Vínculo</th><th>Setor</th><th>Módulo</th><th>Responsabilidade</th><th>Unidade Assistencial</th></tr></thead><tbody id="agent-rows"></tbody></table></div>
+    <div class="table-wrap"><table><thead><tr><th>Nome</th><th>MASP</th><th>Vínculo</th><th>Módulo</th><th>Responsabilidade</th><th>Unidade Assistencial</th><th>Área Técnica</th></tr></thead><tbody id="agent-rows"></tbody></table></div>
   </section>
 
   <footer><div class="foot-text">FHEMIG — Fundação Hospitalar do Estado de Minas Gerais</div><div class="foot-text">Painel Governança TASY · <span id="data-status">Carregando dados...</span></div></footer>
@@ -1792,7 +1792,7 @@ function selectUnit(sigla,btn){
 function renderAgents(){
   const q=(document.getElementById('agent-search').value||'').toLowerCase(); const role=document.getElementById('agent-role').value;
   const rows=DATA.pessoas.filter(p=>{const text=`${p.nome} ${p.masp} ${p.vinculo} ${p.setor} ${p.modulo} ${p.responsabilidade} ${p.unidade_assistencial}`.toLowerCase(); return (!q||text.includes(q))&&(!role||p.responsabilidade===role)});
-  document.getElementById('agent-rows').innerHTML=rows.map(p=>`<tr><td><b>${esc(p.nome)}</b></td><td>${esc(p.masp)}</td><td>${esc(p.vinculo)}</td><td>${esc(p.setor)}</td><td>${esc(p.modulo)}</td><td>${esc(p.responsabilidade)}</td><td>${esc(p.unidade_assistencial)}</td></tr>`).join('');
+  document.getElementById('agent-rows').innerHTML=rows.map(p=>`<tr><td><b>${esc(p.nome)}</b></td><td>${esc(p.masp)}</td><td>${esc(p.vinculo)}</td><td>${esc(p.modulo)}</td><td>${esc(p.responsabilidade)}</td><td>${esc(p.unidade_assistencial)}</td><td>${esc(p.setor)}</td></tr>`).join('');
 }
 
 uniq(DATA.modulos.map(m=>m.sigla_ua)).sort().forEach(v=>document.getElementById('mod-area-filter').insertAdjacentHTML('beforeend',`<option>${esc(v)}</option>`));
