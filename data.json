@@ -1,9 +1,9 @@
 {
   "meta": {
-    "atualizado_em": "2026-10-02T13:15:13-03:00",
+    "atualizado_em": "2026-10-14T16:17:47-03:00",
     "origem": "OneDrive",
     "quantidades": {
-      "pessoas": 858,
+      "pessoas": 857,
       "modulos": 40,
       "uas": 5,
       "uassist": 14
@@ -837,60 +837,6 @@
       "modulo": "Tecnologia da Informação e Comunicação (TI)",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CSSI"
-    },
-    {
-      "nome": "Arthur Felipe Ribeiro Mendes",
-      "masp": 12998142,
-      "vinculo": "Efetivo",
-      "setor": "DIRASS",
-      "modulo": "Internação e gestão do leito",
-      "responsabilidade": "Área Técnica",
-      "unidade_assistencial": ""
-    },
-    {
-      "nome": "Arthur Felipe Ribeiro Mendes",
-      "masp": 12998142,
-      "vinculo": "Efetivo",
-      "setor": "DIRASS",
-      "modulo": "Prontuário Eletrônico do Paciente - PEP",
-      "responsabilidade": "Área Técnica",
-      "unidade_assistencial": ""
-    },
-    {
-      "nome": "Arthur Felipe Ribeiro Mendes",
-      "masp": 12998142,
-      "vinculo": "Efetivo",
-      "setor": "DIRASS",
-      "modulo": "Prescrição Eletrônica",
-      "responsabilidade": "Área Técnica",
-      "unidade_assistencial": ""
-    },
-    {
-      "nome": "Arthur Felipe Ribeiro Mendes",
-      "masp": 12998142,
-      "vinculo": "Efetivo",
-      "setor": "DIRASS",
-      "modulo": "Home Care (Internação Domiciliar - apoio para registro SAD/EMAD)",
-      "responsabilidade": "Área Técnica",
-      "unidade_assistencial": ""
-    },
-    {
-      "nome": "Arthur Felipe Ribeiro Mendes",
-      "masp": 12998142,
-      "vinculo": "Efetivo",
-      "setor": "DIRASS",
-      "modulo": "Enfermagem",
-      "responsabilidade": "Área Técnica",
-      "unidade_assistencial": ""
-    },
-    {
-      "nome": "Arthur Felipe Ribeiro Mendes",
-      "masp": 12998142,
-      "vinculo": "Efetivo",
-      "setor": "DIRASS",
-      "modulo": "Agendas",
-      "responsabilidade": "Área Técnica",
-      "unidade_assistencial": ""
     },
     {
       "nome": "Audrey Rose De Oliveira Perdigão",
@@ -2256,7 +2202,52 @@
       "masp": "",
       "vinculo": "Efetivo",
       "setor": "DIRASS",
+      "modulo": "Internação e gestão do leito",
+      "responsabilidade": "Área Técnica",
+      "unidade_assistencial": ""
+    },
+    {
+      "nome": "Edvane Luiza",
+      "masp": "",
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Prontuário Eletrônico do Paciente - PEP",
+      "responsabilidade": "Área Técnica",
+      "unidade_assistencial": ""
+    },
+    {
+      "nome": "Edvane Luiza",
+      "masp": "",
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Prescrição Eletrônica",
+      "responsabilidade": "Área Técnica",
+      "unidade_assistencial": ""
+    },
+    {
+      "nome": "Edvane Luiza",
+      "masp": "",
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Home Care (Internação Domiciliar - apoio para registro SAD/EMAD)",
+      "responsabilidade": "Área Técnica",
+      "unidade_assistencial": ""
+    },
+    {
+      "nome": "Edvane Luiza",
+      "masp": "",
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
       "modulo": "Enfermagem",
+      "responsabilidade": "Área Técnica",
+      "unidade_assistencial": ""
+    },
+    {
+      "nome": "Edvane Luiza",
+      "masp": "",
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Agendas",
       "responsabilidade": "Área Técnica",
       "unidade_assistencial": ""
     },
@@ -4538,6 +4529,51 @@
       "unidade_assistencial": "HRJP"
     },
     {
+      "nome": "Lorena Carvalho",
+      "masp": "",
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Internação e gestão do leito",
+      "responsabilidade": "Área Técnica",
+      "unidade_assistencial": ""
+    },
+    {
+      "nome": "Lorena Carvalho",
+      "masp": "",
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Prontuário Eletrônico do Paciente - PEP",
+      "responsabilidade": "Área Técnica",
+      "unidade_assistencial": ""
+    },
+    {
+      "nome": "Lorena Carvalho",
+      "masp": "",
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Prescrição Eletrônica",
+      "responsabilidade": "Área Técnica",
+      "unidade_assistencial": ""
+    },
+    {
+      "nome": "Lorena Carvalho",
+      "masp": "",
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Suporte à Decisão Clínica (SDC) - Módulo Mentor Tasy",
+      "responsabilidade": "Área Técnica",
+      "unidade_assistencial": ""
+    },
+    {
+      "nome": "Lorena Carvalho",
+      "masp": "",
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Agendas",
+      "responsabilidade": "Área Técnica",
+      "unidade_assistencial": ""
+    },
+    {
       "nome": "Lucas Coelho Martins",
       "masp": 16361370,
       "vinculo": "Efetivo",
@@ -5715,51 +5751,6 @@
       "modulo": "Patrimônio",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "MOV"
-    },
-    {
-      "nome": "Patrícia Valadares",
-      "masp": "",
-      "vinculo": "Efetivo",
-      "setor": "DIRASS",
-      "modulo": "Internação e gestão do leito",
-      "responsabilidade": "Área Técnica",
-      "unidade_assistencial": ""
-    },
-    {
-      "nome": "Patrícia Valadares",
-      "masp": "",
-      "vinculo": "Efetivo",
-      "setor": "DIRASS",
-      "modulo": "Prontuário Eletrônico do Paciente - PEP",
-      "responsabilidade": "Área Técnica",
-      "unidade_assistencial": ""
-    },
-    {
-      "nome": "Patrícia Valadares",
-      "masp": "",
-      "vinculo": "Efetivo",
-      "setor": "DIRASS",
-      "modulo": "Prescrição Eletrônica",
-      "responsabilidade": "Área Técnica",
-      "unidade_assistencial": ""
-    },
-    {
-      "nome": "Patrícia Valadares",
-      "masp": "",
-      "vinculo": "Efetivo",
-      "setor": "DIRASS",
-      "modulo": "Suporte à Decisão Clínica (SDC) - Módulo Mentor Tasy",
-      "responsabilidade": "Área Técnica",
-      "unidade_assistencial": ""
-    },
-    {
-      "nome": "Patrícia Valadares",
-      "masp": "",
-      "vinculo": "Efetivo",
-      "setor": "DIRASS",
-      "modulo": "Agendas",
-      "responsabilidade": "Área Técnica",
-      "unidade_assistencial": ""
     },
     {
       "nome": "Paula Lopes Ciollete",
