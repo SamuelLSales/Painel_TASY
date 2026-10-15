@@ -1,6 +1,6 @@
 {
   "meta": {
-    "atualizado_em": "2026-10-14T16:17:47-03:00",
+    "atualizado_em": "2026-10-15T12:33:16-03:00",
     "origem": "OneDrive",
     "quantidades": {
       "pessoas": 857,
@@ -4574,6 +4574,15 @@
       "unidade_assistencial": ""
     },
     {
+      "nome": "Lorena Carvalho",
+      "masp": "",
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Pronto Atendimento",
+      "responsabilidade": "Área Técnica",
+      "unidade_assistencial": ""
+    },
+    {
       "nome": "Lucas Coelho Martins",
       "masp": 16361370,
       "vinculo": "Efetivo",
@@ -5634,15 +5643,6 @@
       "modulo": "Central de Material e Esterilização (CME) - patrimônio",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "HIJPII"
-    },
-    {
-      "nome": "Patricia Alves Valadares Assunção",
-      "masp": 12108775,
-      "vinculo": "Efetivo",
-      "setor": "DIRASS",
-      "modulo": "Pronto Atendimento",
-      "responsabilidade": "Área Técnica",
-      "unidade_assistencial": ""
     },
     {
       "nome": "Patricia Antunes Alves",
