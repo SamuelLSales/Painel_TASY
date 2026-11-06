@@ -1,9 +1,9 @@
 {
   "meta": {
-    "atualizado_em": "2026-10-15T12:33:16-03:00",
+    "atualizado_em": "2026-11-06T14:58:00-03:00",
     "origem": "OneDrive",
     "quantidades": {
-      "pessoas": 857,
+      "pessoas": 859,
       "modulos": 40,
       "uas": 5,
       "uassist": 14
@@ -1973,6 +1973,15 @@
       "unidade_assistencial": "HIJPII"
     },
     {
+      "nome": "Danielle dos Santos Soares Arcanjo",
+      "masp": 12231288,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Nutrição",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Dayanna Talita Pedrosa",
       "masp": 14894653,
       "vinculo": "Efetivo",
@@ -3141,6 +3150,15 @@
       "modulo": "Higienização",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CSSI"
+    },
+    {
+      "nome": "Gilberto Pádua Cavalcanti",
+      "masp": 13684998,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Almoxarifado",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Gilmara Areal de Carvalho",
