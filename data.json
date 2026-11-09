@@ -1,9 +1,9 @@
 {
   "meta": {
-    "atualizado_em": "2026-11-06T14:58:00-03:00",
+    "atualizado_em": "2026-11-09T10:48:00-03:00",
     "origem": "OneDrive",
     "quantidades": {
-      "pessoas": 859,
+      "pessoas": 861,
       "modulos": 40,
       "uas": 5,
       "uassist": 14
@@ -5222,6 +5222,15 @@
       "unidade_assistencial": "MOV"
     },
     {
+      "nome": "Marisa Aparecida Guatimosim Azevedo",
+      "masp": 11750161,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Farmácia",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Marisa Resende Pereira Criscolo",
       "masp": 10914794,
       "vinculo": "Efetivo",
@@ -5562,6 +5571,15 @@
       "modulo": "Enfermagem",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CHB"
+    },
+    {
+      "nome": "Nayara Almeida Lage",
+      "masp": 16079170,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Farmácia",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Nayara Pacheco",
