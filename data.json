@@ -1,12 +1,12 @@
 {
   "meta": {
-    "atualizado_em": "2026-11-09T11:31:00-03:00",
+    "atualizado_em": "2026-11-17T10:05:00-03:00",
     "origem": "OneDrive",
     "quantidades": {
-      "pessoas": 858,
-      "modulos": 40,
+      "pessoas": 933,
+      "modulos": 42,
       "uas": 5,
-      "uassist": 13
+      "uassist": 14
     }
   },
   "pessoas": [
@@ -18,6 +18,15 @@
       "modulo": "Manutenção",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CHU"
+    },
+    {
+      "nome": "Adeilson Bonifácil de Jesus",
+      "masp": 12055323,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Manutenção",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Ademir Barbosa",
@@ -405,6 +414,15 @@
       "modulo": "Internação e gestão do leito",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "MOV"
+    },
+    {
+      "nome": "Ana Paula de Oliveira Silveira Cruz",
+      "masp": 13645403,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "CUIDAR",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Ana Paula Gomes Da Costa",
@@ -1019,6 +1037,15 @@
       "unidade_assistencial": "CHU"
     },
     {
+      "nome": "Brenda Francielle da Silva de Oliveira",
+      "masp": 13974472,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Manutenção (equipamentos médicos)",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Bruna Gabriela Rodrigues De Lima",
       "masp": 13736707,
       "vinculo": "Efetivo",
@@ -1217,6 +1244,24 @@
       "unidade_assistencial": "CHU"
     },
     {
+      "nome": "Bruno Santana dos Anjos",
+      "masp": 11733623,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Farmácia",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Bruno Santana dos Anjos",
+      "masp": 11733623,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Estoque  (medicamentos, material médico hospitalar, insumos e produtos de saúde)",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Bruno Souza Rodrigues",
       "masp": 7532237,
       "vinculo": "Efetivo",
@@ -1224,6 +1269,15 @@
       "modulo": "",
       "responsabilidade": "Ponto Focal da Unidade",
       "unidade_assistencial": "CHU"
+    },
+    {
+      "nome": "Bruno Souza Rodrigues",
+      "masp": 7532237,
+      "vinculo": "Efetivo",
+      "setor": "",
+      "modulo": "",
+      "responsabilidade": "Ponto Focal da Unidade",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Bruno Volpini Guimarães",
@@ -1296,6 +1350,15 @@
       "modulo": "Home Care (Internação Domiciliar - apoio para registro SAD/EMAD)",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CHU"
+    },
+    {
+      "nome": "Carolina Beatriz Brum Paiva",
+      "masp": 13637707,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Home Care (Internação Domiciliar - apoio para registro SAD/EMAD)",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Carolina Dato",
@@ -1586,6 +1649,15 @@
       "unidade_assistencial": "CHU"
     },
     {
+      "nome": "Clauger Felix Correa Neves",
+      "masp": 11275187,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Central de Material e Esterilização (CME) - patrimônio",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "CHU"
+    },
+    {
       "nome": "Clauger Félix Correa Neves",
       "masp": 11275187,
       "vinculo": "Efetivo",
@@ -1600,15 +1672,6 @@
       "vinculo": "Efetivo",
       "setor": "DIRASS",
       "modulo": "Central de Material e Esterilização (CME) - Assistencial",
-      "responsabilidade": "Usuário-Chave",
-      "unidade_assistencial": "CHU"
-    },
-    {
-      "nome": "Clauger Felix Correa Neves",
-      "masp": 11275187,
-      "vinculo": "Efetivo",
-      "setor": "DPGF",
-      "modulo": "Central de Material e Esterilização (CME) - patrimônio",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CHU"
     },
@@ -1638,6 +1701,24 @@
       "modulo": "Agendas",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CHU"
+    },
+    {
+      "nome": "Cristiane Cenachi Coelho",
+      "masp": 12946588,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Prontuário Eletrônico do Paciente - PEP",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Cristiane Cenachi Coelho",
+      "masp": 12946588,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Agendas",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Cristianne De Medeiros",
@@ -1820,6 +1901,15 @@
       "unidade_assistencial": "CHU"
     },
     {
+      "nome": "Daniel Ferreira da Silva",
+      "masp": 10637304,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Patrimônio",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Daniel Reis Da Silva",
       "masp": 12018560,
       "vinculo": "Efetivo",
@@ -1856,6 +1946,33 @@
       "unidade_assistencial": "CHU"
     },
     {
+      "nome": "Daniela Batista de Souza",
+      "masp": 11956075,
+      "vinculo": "Efetivo",
+      "setor": "DPAR",
+      "modulo": "Custos",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Daniela Batista de Souza",
+      "masp": 11956075,
+      "vinculo": "Efetivo",
+      "setor": "DPAR",
+      "modulo": "Serviço de Arquivo Médico e Estatística (SAME) Estatística (ADC)",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Daniela Batista de Souza",
+      "masp": 11956075,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Serviço de Arquivo Médico e Estatística (SAME) - gestão documental",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Daniela Cristiny Paiva Gomes",
       "masp": 13696760,
       "vinculo": "Efetivo",
@@ -1881,6 +1998,24 @@
       "modulo": "Balanced Scorecard (BSC)",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CHU"
+    },
+    {
+      "nome": "Daniela de Cassia Pereira da Cunha",
+      "masp": 11999190,
+      "vinculo": "Efetivo",
+      "setor": "AEST",
+      "modulo": "EIS",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Daniela de Cassia Pereira da Cunha",
+      "masp": 11999190,
+      "vinculo": "Efetivo",
+      "setor": "AEST",
+      "modulo": "Balanced Scorecard (BSC)",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Daniela Neto Ferreira Melki",
@@ -1964,6 +2099,24 @@
       "unidade_assistencial": "CHU"
     },
     {
+      "nome": "Danielle Camargos de Castro",
+      "masp": 12846291,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Prontuário Eletrônico do Paciente - PEP",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Danielle Camargos de Castro",
+      "masp": 12846291,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Agendas",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Danielle dos Santos Soares Arcanjo",
       "masp": 12231288,
       "vinculo": "Efetivo",
@@ -2000,6 +2153,15 @@
       "unidade_assistencial": "CHU"
     },
     {
+      "nome": "Debora Mariana Silva Ferreira",
+      "masp": 16369597,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Administração de Contratos",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Debora Talita Dantzger Torresilha",
       "masp": 13432174,
       "vinculo": "Efetivo",
@@ -2016,6 +2178,15 @@
       "modulo": "Custos",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CSSFE"
+    },
+    {
+      "nome": "Deborha Pereira Silva",
+      "masp": 12894234,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Banco de Tecidos Oculares",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Denise Sanchez Moreno Branquinho",
@@ -2864,6 +3035,15 @@
       "unidade_assistencial": ""
     },
     {
+      "nome": "Fernanda Costa R. Sacramento",
+      "masp": 12894309,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "CUIDAR",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Fernanda Doumith Madureira",
       "masp": 12885828,
       "vinculo": "Efetivo",
@@ -2925,6 +3105,15 @@
       "modulo": "Internação e gestão do leito",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CHU"
+    },
+    {
+      "nome": "Fernanda Helena Caputo Gomes",
+      "masp": 13050752,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Internação e gestão do leito",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Fernanda Kelly Alvarenga Carvalho",
@@ -3152,6 +3341,15 @@
       "unidade_assistencial": "CHU"
     },
     {
+      "nome": "Gilberto Pádua Cavalcanti",
+      "masp": 13684998,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Almoxarifado",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Gilmara Areal de Carvalho",
       "masp": 12568846,
       "vinculo": "Efetivo",
@@ -3188,15 +3386,6 @@
       "unidade_assistencial": "CHU"
     },
     {
-      "nome": "Giselle Neves De Magalhães",
-      "masp": 10898138,
-      "vinculo": "Efetivo",
-      "setor": "",
-      "modulo": "",
-      "responsabilidade": "Ponto Focal da Unidade",
-      "unidade_assistencial": "CHU"
-    },
-    {
       "nome": "Giselle Neves de Magalhães",
       "masp": 10898138,
       "vinculo": "Efetivo",
@@ -3224,11 +3413,74 @@
       "unidade_assistencial": "CHU"
     },
     {
+      "nome": "Giselle Neves de Magalhães",
+      "masp": 10898138,
+      "vinculo": "Efetivo",
+      "setor": "",
+      "modulo": "",
+      "responsabilidade": "Ponto Focal da Unidade",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Giselle Neves de Magalhães",
+      "masp": 10898138,
+      "vinculo": "Efetivo",
+      "setor": "DPAR",
+      "modulo": "Gestão de autorizações",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Giselle Neves de Magalhães",
+      "masp": 10898138,
+      "vinculo": "Efetivo",
+      "setor": "DPAR",
+      "modulo": "Custos",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Giselle Neves de Magalhães",
+      "masp": 10898138,
+      "vinculo": "Efetivo",
+      "setor": "DPGF(TI)",
+      "modulo": "Tecnologia da Informação e Comunicação (TI)",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Giselle Neves De Magalhães",
+      "masp": 10898138,
+      "vinculo": "Efetivo",
+      "setor": "",
+      "modulo": "",
+      "responsabilidade": "Ponto Focal da Unidade",
+      "unidade_assistencial": "CHU"
+    },
+    {
       "nome": "Gislaine de Souza Rodrigues Pereira",
       "masp": 12794251,
       "vinculo": "Efetivo",
       "setor": "DIRASS",
       "modulo": "Agendas",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "CHU"
+    },
+    {
+      "nome": "Gislaine de Souza Rodrigues Pereira",
+      "masp": 12794251,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Agendas",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Gisley Aparecida Cruz",
+      "masp": 13632112,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Enfermagem",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CHU"
     },
@@ -3239,7 +3491,7 @@
       "setor": "DIRASS",
       "modulo": "Enfermagem",
       "responsabilidade": "Usuário-Chave",
-      "unidade_assistencial": "CHU"
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Glaucia Carneiro Do Espirito Santo",
@@ -3303,6 +3555,33 @@
       "modulo": "SUS (módulo complementar do faturamento)",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CHU"
+    },
+    {
+      "nome": "Glauciene Silva Leite Borges",
+      "masp": 13600994,
+      "vinculo": "Efetivo",
+      "setor": "DPAR",
+      "modulo": "Auditoria de contas faturadas",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Glauciene Silva Leite Borges",
+      "masp": 13600994,
+      "vinculo": "Efetivo",
+      "setor": "DPAR",
+      "modulo": "Faturamento",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Glauciene Silva Leite Borges",
+      "masp": 13600994,
+      "vinculo": "Efetivo",
+      "setor": "DPAR",
+      "modulo": "SUS (módulo complementar do faturamento)",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Guilherme Curcio Cassini",
@@ -3440,6 +3719,24 @@
       "unidade_assistencial": "CHB"
     },
     {
+      "nome": "Israel de Oliveira Safe",
+      "masp": 13673215,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Manutenção",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Israel de Oliveira Safe",
+      "masp": 13673215,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Manutenção (equipamentos médicos)",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Israel de Oliveira Silva",
       "masp": 13673215,
       "vinculo": "Efetivo",
@@ -3483,6 +3780,51 @@
       "modulo": "Recepção e Visitas",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CHU"
+    },
+    {
+      "nome": "Ivani Dias Barbosa",
+      "masp": 10392298,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Internação e gestão do leito",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Ivani Dias Barbosa",
+      "masp": 10392298,
+      "vinculo": "Efetivo",
+      "setor": "DPAR",
+      "modulo": "Gestão de autorizações",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Ivani Dias Barbosa",
+      "masp": 10392298,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Recepção e Visitas",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Izabela Figueiredo de Sousa Honorato",
+      "masp": 11161585,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Comissão de Controle de Infecção Hospitalar (CCIH)",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Izabela Figueiredo de Sousa Honorato",
+      "masp": 11161585,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Qualidade - Segurança do paciente",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Izabella Bini",
@@ -4331,6 +4673,24 @@
       "unidade_assistencial": "CHU"
     },
     {
+      "nome": "Lidiane Michels Pacheco Moreira",
+      "masp": 12826608,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Enfermagem",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Lidiane Romualda da S. Pinheiro",
+      "masp": 16657397,
+      "vinculo": "Contrato",
+      "setor": "DIRASS",
+      "modulo": "CUIDAR",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Lilian Azevedo",
       "masp": 12003885,
       "vinculo": "Efetivo",
@@ -4419,6 +4779,15 @@
       "modulo": "Compras",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CHU"
+    },
+    {
+      "nome": "Limar Martins Silva",
+      "masp": 14223911,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Compras",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Lincoln Chaves Silva",
@@ -4898,6 +5267,15 @@
       "unidade_assistencial": "CHU"
     },
     {
+      "nome": "Marcelo Eustáquio Caldas Rodrigues",
+      "masp": 10840288,
+      "vinculo": "Efetivo",
+      "setor": "DPGF(TI)",
+      "modulo": "Tecnologia da Informação e Comunicação (TI)",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Marcelo Jose Da Costa",
       "masp": 10588093,
       "vinculo": "Efetivo",
@@ -4932,6 +5310,15 @@
       "modulo": "Pronto Atendimento",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CHU"
+    },
+    {
+      "nome": "Marcia Goretty de Souza e Silva",
+      "masp": 12762597,
+      "vinculo": "Efetivo",
+      "setor": "",
+      "modulo": "",
+      "responsabilidade": "Ponto Focal da Unidade",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Marcia Goretty De Souza E Silva",
@@ -5051,6 +5438,15 @@
       "unidade_assistencial": "CHB"
     },
     {
+      "nome": "Maria da Conceição Gomes",
+      "masp": 10502235,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "CUIDAR",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Maria De Fátima Da Silveira Assis",
       "masp": 12855516,
       "vinculo": "Efetivo",
@@ -5078,6 +5474,15 @@
       "unidade_assistencial": "MOV"
     },
     {
+      "nome": "Maria Ines Dias Abras",
+      "masp": 10887222,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Exames",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Maria Inês Dias Abras",
       "masp": 10887222,
       "vinculo": "Efetivo",
@@ -5085,6 +5490,15 @@
       "modulo": "Agendas",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CHU"
+    },
+    {
+      "nome": "Maria Inês Dias Abras",
+      "masp": 10887222,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Agendas",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Maria Jose Oliveira",
@@ -5220,6 +5634,15 @@
       "modulo": "Nutrição",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "HCM"
+    },
+    {
+      "nome": "Marta Dantas de Araujo dos Santos",
+      "masp": 12638383,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Prontuário Eletrônico do Paciente - PEP",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Mateus Henrique Da Silva",
@@ -5474,6 +5897,15 @@
       "unidade_assistencial": "CHU"
     },
     {
+      "nome": "Nadia Maria Telles Brant",
+      "masp": 13876024,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Patrimônio",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Natalia Da Cunha Severino",
       "masp": 11045176,
       "vinculo": "Efetivo",
@@ -5553,6 +5985,15 @@
       "modulo": "Farmácia",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CHU"
+    },
+    {
+      "nome": "Nayara Alves de Souza de Oliveira",
+      "masp": 16365223,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Prontuário Eletrônico do Paciente - PEP",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Nayara Pacheco",
@@ -5654,6 +6095,15 @@
       "unidade_assistencial": "CHU"
     },
     {
+      "nome": "Patricia Aichinger Dias",
+      "masp": 13633987,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Central de Material e Esterilização (CME) - patrimônio",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Patricia Antunes Alves",
       "masp": 10024917,
       "vinculo": "Efetivo",
@@ -5706,6 +6156,15 @@
       "modulo": "Qualidade - indicadores, documentos e Relatórios de não conformidades (RNC)",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CHU"
+    },
+    {
+      "nome": "Patricia de Moura Silva Campos",
+      "masp": 12899845,
+      "vinculo": "Efetivo",
+      "setor": "AEST",
+      "modulo": "Qualidade - indicadores, documentos e Relatórios de não conformidades (RNC)",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Patrícia Flávia Santos Nascimento",
@@ -5861,6 +6320,42 @@
       "unidade_assistencial": "CHU"
     },
     {
+      "nome": "Paulo Afonso Rodrigues Leão",
+      "masp": 13618384,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Laboratório",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Paulo Afonso Rodrigues Leão",
+      "masp": 13618384,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Anatomia Patológica",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Paulo Afonso Rodrigues Leão",
+      "masp": 13618384,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Hemoterapia",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Paulo Afonso Rodrigues Leão",
+      "masp": 13618384,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Agendas",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Pedro Rodrigues Diniz",
       "masp": 13491022,
       "vinculo": "Efetivo",
@@ -5949,6 +6444,24 @@
       "modulo": "Pronto Atendimento",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CHU"
+    },
+    {
+      "nome": "Pedro Zupo Campos",
+      "masp": 12152443,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Prontuário Eletrônico do Paciente - PEP",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Pedro Zupo Campos",
+      "masp": 12152443,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Pronto Atendimento",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Priscila Arcebispo Leo",
@@ -6221,6 +6734,24 @@
       "unidade_assistencial": "CHU"
     },
     {
+      "nome": "Raimundo Sérgio de Souza",
+      "masp": 10402188,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Estoque  (medicamentos, material médico hospitalar, insumos e produtos de saúde)",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Raimundo Sérgio de Souza",
+      "masp": 10402188,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Almoxarifado",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Raissa Gabriela Oliveira Almeida",
       "masp": 13956859,
       "vinculo": "Efetivo",
@@ -6390,6 +6921,15 @@
       "modulo": "Manutenção (equipamentos médicos)",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "HRJP"
+    },
+    {
+      "nome": "Renata Cabral Danese",
+      "masp": 10900546,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Nutrição",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Renata Cristina Pantaleão",
@@ -6644,6 +7184,33 @@
       "unidade_assistencial": "CHU"
     },
     {
+      "nome": "Rosana Peres Lima",
+      "masp": 10427318,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Recepção e Visitas",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Rosana Peres Lima",
+      "masp": 10427318,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Higienização",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Rosana Peres Lima",
+      "masp": 10427318,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Rouparia",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Rosária Dos Santos Vieira",
       "masp": 12322681,
       "vinculo": "Efetivo",
@@ -6669,6 +7236,15 @@
       "modulo": "Enfermagem",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CHU"
+    },
+    {
+      "nome": "Rosemeire Rosario da Silva",
+      "masp": 11037702,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Enfermagem",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Rosilene Pimenta M. Ferreira Da Silva",
@@ -6849,6 +7425,42 @@
       "modulo": "Agendas",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CHU"
+    },
+    {
+      "nome": "Shirlene Christie Alves de Oliveira dos Santos",
+      "masp": 13083787,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Prontuário Eletrônico do Paciente - PEP",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Shirlene Christie Alves de Oliveira dos Santos",
+      "masp": 13083787,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Home Care (Internação Domiciliar - apoio para registro SAD/EMAD)",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Shirlene Christie Alves de Oliveira dos Santos",
+      "masp": 13083787,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Agendas",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Shirlene Christie Alves de Oliveira dos Santos",
+      "masp": 13083787,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "CUIDAR",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Silvana Teixeira Fiel",
@@ -7301,6 +7913,24 @@
       "unidade_assistencial": "CHU"
     },
     {
+      "nome": "Thais Maria Teixeira Costa Figueiroa",
+      "masp": 11877446,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Central de Material e Esterilização (CME) - Assistencial",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Thais Maria Teixeira Costa Figueiroa",
+      "masp": 11877446,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Central de Material e Esterilização (CME) - patrimônio",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Thayla Milene Lopes França",
       "masp": 16310435,
       "vinculo": "Efetivo",
@@ -7472,6 +8102,33 @@
       "unidade_assistencial": "CHU"
     },
     {
+      "nome": "Vânia Andrade de Fernandes",
+      "masp": 10400315,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Recepção e Visitas",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Vânia Andrade de Fernandes",
+      "masp": 10400315,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Higienização",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Vânia Andrade de Fernandes",
+      "masp": 10400315,
+      "vinculo": "Efetivo",
+      "setor": "DPGF",
+      "modulo": "Rouparia",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
       "nome": "Vinicius Sousa Pietra Pedroso",
       "masp": 12156592,
       "vinculo": "Efetivo",
@@ -7497,6 +8154,24 @@
       "modulo": "Suporte à Decisão Clínica (SDC) - Módulo Mentor Tasy",
       "responsabilidade": "Usuário-Chave",
       "unidade_assistencial": "CHU"
+    },
+    {
+      "nome": "Virgínia Sheila Xavier Silva",
+      "masp": 13002381,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Prescrição Eletrônica",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
+    },
+    {
+      "nome": "Virgínia Sheila Xavier Silva",
+      "masp": 13002381,
+      "vinculo": "Efetivo",
+      "setor": "DIRASS",
+      "modulo": "Suporte à Decisão Clínica (SDC) - Módulo Mentor Tasy",
+      "responsabilidade": "Usuário-Chave",
+      "unidade_assistencial": "HIJPII"
     },
     {
       "nome": "Vivian Gribel Dávila",
@@ -8053,6 +8728,22 @@
       "ua": "Diretoria de Planejamento, Gestão e Finanças",
       "nome": "Tecnologia da Informação e Comunicação (TI)",
       "detalhamento": "Apoiar e orientar as demais áreas técnicas e usuários-chave quanto ao funcionamento do sistema e elaboração de Ordens de Serviço."
+    },
+    {
+      "id": "MOD041",
+      "sigla_ua": "DIRASS",
+      "id_ua": "UA_DIRASS",
+      "ua": "Diretoria Assistencial",
+      "nome": "CUIDAR",
+      "detalhamento": "Atendimento a pacientes pediátricos com doenças crônico-complexas (internação nas enfermarias do 3º andar e internação domiciliar)."
+    },
+    {
+      "id": "MOD042",
+      "sigla_ua": "DIRASS",
+      "id_ua": "UA_DIRASS",
+      "ua": "Diretoria Assistencial",
+      "nome": "Banco de Tecidos Oculares",
+      "detalhamento": "Gerenciamento, captação e controle de tecidos oculares para transplantes."
     }
   ],
   "uas": [
@@ -8147,6 +8838,11 @@
       "id": "UAS_HEM",
       "sigla": "HEM",
       "nome": "Hospital Eduardo de Menezes"
+    },
+    {
+      "id": "UAS_HIJPII",
+      "sigla": "HIJPII",
+      "nome": "Hospital Infantil João Paulo II"
     }
   ]
 }
